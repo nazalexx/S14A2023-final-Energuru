@@ -6,9 +6,9 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 **Meeting Times**: <<meeting times>>
 
-**Zoom Link**: <<zoom link>>
+**Zoom Link**: <<https://harvard.zoom.us/j/6840164991>>
 
-**Github Repo**: <<https://github.com/Harvard-DCE-BIWADA/S14A2023-final- super-cool-team-repo>>
+**Github Repo**: <<[HomeHunters Unite Github](https://github.com/Harvard-DCE-BIWADA/s14a2023-final-HomeHunter)>>
 
 **Website Design Template**: https://html5up.net/big-picture
 
@@ -16,7 +16,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 ### Team Members
 
-Cool Dude - alsome1@g.harvard.edu
+Emilia Bates emb497@g.harvard.edu
 Sam Cooke - cookes@monster.net
 Lady Gaga - gaga@lady.jams
 
@@ -50,7 +50,7 @@ The main components of the app are:
 # Milestone 1 Tasks
 
 ​
-Cool Dude
+Emilia Bates
 
 1. Github repository **COMPLETE**
    ​
@@ -66,7 +66,7 @@ Cool Dude
 # Milestone X Tasks
 
 ​
-Cool Dude
+Emilia Bates
 ​
 
 1. Task 1 **COMPLETE**
