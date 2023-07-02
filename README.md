@@ -6,7 +6,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 **Meeting Times**: <<meeting times>>
 
-**Zoom Link**: (Zoom Link to Meet)[https://harvard.zoom.us/j/6840164991]
+**Zoom Link**: [Zoom Link to Meet](https://harvard.zoom.us/j/6840164991)
 
 **Github Repo**: [HomeHunters Unite Github](https://github.com/Harvard-DCE-BIWADA/s14a2023-final-HomeHunter)
 
