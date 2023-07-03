@@ -4,7 +4,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 ## Project Plan
 
-**Meeting Times**: <<meeting times>>
+**Meeting Times**: <<12:30pm PDT/10:30pm GMT>>
 
 **Zoom Link**: [Zoom Link to Meet](https://harvard.zoom.us/j/6840164991)
 
