@@ -72,21 +72,21 @@ Emilia Bates:
 ​
 
 Aleksejs Nazarovs:
-4. Task 1 **IN PROCESS**
-5. Task 2 **IN PROCESS**
-6. Task 3 **IN PROCESS**
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
 
 ​
 Jayden Wang:
-7. Task 1 **IN PROCESS**
-8. Task 2 **IN PROCESS**
-9. Task 3 **IN PROCESS**
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
 
 
 All:
-7. Task 1 **IN PROCESS**
-8. Task 2 **IN PROCESS**
-9. Task 3 **IN PROCESS**
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
    ​
 
 # References & Citations
