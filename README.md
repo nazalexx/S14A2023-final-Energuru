@@ -19,6 +19,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 Emilia Bates emb497@g.harvard.edu
 Sam Cooke - cookes@monster.net
 Lady Gaga - gaga@lady.jams
+Jayden Wang - jaw0880@g.harvard.edu
 
 ## Project Basics
 
