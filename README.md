@@ -47,7 +47,7 @@ The main components of the app are:
 
 ## Project Timeline
 
-# Milestone 1 Tasks
+### Milestone 1 Tasks
 
 Emilia Bates:
 1. Github repository **COMPLETE**
@@ -59,10 +59,36 @@ Aleksejs Nazarovs:
 ​
 All:
 1. Project plan **COMPLETE**
-2. Choose data set **IN PROCESS**
    ​
 
-# Milestone 2 Tasks
+### Milestone 2 Tasks
+
+
+Emilia Bates:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+​
+
+Aleksejs Nazarovs:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+​
+Jayden Wang:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+All:
+1. Choose data set **IN PROCESS**
+2. Data cleaning **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+### Milestone 3 Tasks
 
 
 Emilia Bates:
@@ -89,7 +115,7 @@ All:
 3. Task 3 **IN PROCESS**
    ​
 
-# References & Citations
+## References & Citations
 
 - The Stanford GraphBase: A Platform for Combinatorial Computing by Donald E. Knuth (New York: ACM Press, 1994), viii+576pp.
 https://www-cs-faculty.stanford.edu/~knuth/sgb.html
