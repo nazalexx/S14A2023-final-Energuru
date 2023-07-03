@@ -64,7 +64,7 @@ Emilia Bates
 1. Cite all work **IN PROCESS**
    ​
 
-# Milestone X Tasks
+# Milestone 2 Tasks
 
 ​
 Emilia Bates
