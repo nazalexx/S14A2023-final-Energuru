@@ -64,12 +64,6 @@ All:
 ### Milestone 2 Tasks
 
 
-Emilia Bates:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
-​
-
 Aleksejs Nazarovs:
 1. Task 1 **IN PROCESS**
 2. Task 2 **IN PROCESS**
@@ -90,12 +84,6 @@ All:
 
 ### Milestone 3 Tasks
 
-
-Emilia Bates:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
-​
 
 Aleksejs Nazarovs:
 1. Task 1 **IN PROCESS**
