@@ -6,7 +6,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 **Meeting Times**: Fridays & Sundays at 12:30pm PDT / 3:30pm EDT / 10:30pm EEST
 
-**Zoom Link**: https://harvard.zoom.us/j/6840164991
+**Zoom Link**: https://harvard.zoom.us/j/94699814543
 
 **Github Repo**: https://github.com/Harvard-DCE-BIWADA/s14a2023-final-HomeHunter
 
@@ -16,7 +16,6 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 ### Team Members
 
-- Emilia Bates - emb497@g.harvard.edu
 - Aleksejs Nazarovs - aln755@g.harvard.edu
 - Jayden Wang - jaw0880@g.harvard.edu
 
@@ -49,16 +48,13 @@ The main components of the app are:
 
 ### Milestone 1 Tasks
 
-Emilia Bates:
-1. Github repository **COMPLETE**
-
-
 Aleksejs Nazarovs:
 1. Process book **COMPLETE**
 
 ​
 All:
-1. Project plan **COMPLETE**
+1. Github repository **COMPLETE**
+2. Project plan **COMPLETE**
    ​
 
 ### Milestone 2 Tasks
@@ -77,23 +73,23 @@ Jayden Wang:
 
 
 All:
-1. Choose data set **IN PROCESS**
-2. Data cleaning **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Agree on revised data topic **COMPLETE**
+2. Choose data set **COMPLETE**
+3. Divide the work **COMPLETE**
 
 
 ### Milestone 3 Tasks
 
 
 Aleksejs Nazarovs:
-1. Task 1 **IN PROCESS**
+1. Build a model **IN PROCESS**
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
 
 ​
 Jayden Wang:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
+1. Play with data **IN PROCESS**
+2. Build charts **IN PROCESS**
 3. Task 3 **IN PROCESS**
 
 
