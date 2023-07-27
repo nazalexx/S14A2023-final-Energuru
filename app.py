@@ -43,39 +43,30 @@ def form():
 
 
 
-@app.route('/results/<user>', methods=['GET', 'POST'])
+@app.route('/results')
 def results(user):
+    with open('results.json', 'r') as file:
+        results = json.load(file)
+        return render_template('results.html', results=results)
 
+@app.route('/results/<user>', methods=['GET', 'POST'])
+def result(user):
+    
     if request.method == 'GET':
         with open('results.json', 'r') as file:
             results = json.load(file)
-        args = request.args
-        if 'user' in args.keys():
-            user = args['user']
+        if user in results:
             prediction = results[user]['prediction']
             max_reductions = results[user]['max_reductions']
-            if user in results:
-                return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
-            else:
-                return f'No results for {user} in our database :('
+            return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
         else:
-            return render_template('results.html', results=results)
+            return f'No results for {user} in our database :('
 
     elif request.method == 'POST':
         with open('allowed_choices.json', 'r') as file:
             allowed_choices = json.load(file)
-
         args = request.form
-        user = args['user']
-        inputs = {}
-        for key, value in args.items():
-            if key == 'user':
-                continue
-            elif key in allowed_choices:
-                inputs[key] = value
-            else:
-                inputs[key] = int(value)
-
+        inputs = {key: value if key in allowed_choices else key: int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
         return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
 
