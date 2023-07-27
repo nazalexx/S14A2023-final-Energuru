@@ -60,9 +60,21 @@ def results(user):
             return ''
 
     elif request.method == 'POST':
+        with open('allowed_choices.json', 'r') as file:
+            allowed_choices = json.load(file)
+
         args = request.form
         user = args['user']
-        for key, value
+        inputs = {}
+        for key, value in args.items():
+            if key == 'user':
+                continue
+            elif key in allowed_choices:
+                inputs[key] = value
+            else:
+                inputs[key] = int(value)
+
+        prediction, max_reductions = predict_and_advise(inputs)
 
 
 @app.route('/results')
