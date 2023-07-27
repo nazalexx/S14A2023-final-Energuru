@@ -6,11 +6,11 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 **Meeting Times**: Fridays & Sundays at 12:30pm PDT / 3:30pm EDT / 10:30pm EEST
 
-**Zoom Link**: https://harvard.zoom.us/j/94699814543
+**Zoom Link**: https://harvard.zoom.us/j/98692370300
 
-**Github Repo**: https://github.com/Harvard-DCE-BIWADA/s14a2023-final-HomeHunter
+**Github Repo**: https://github.com/Harvard-DCE-BIWADA/S14A2023-final-Energuru
 
-**Website Design Template**: **[coming soon]**
+**Website Design Template**: https://getbootstrap.com/docs/5.3/examples/carousel/
 
 **Website Location**: **[coming soon]**
 
@@ -21,7 +21,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 ## Project Basics
 
-The purpose of this project is to create a predictive model and an interactive web-based tool for predicting property prices based on their features and location. This tool will aim to assist homeowners, prospective buyers and real estate professionals in estimating the potential market value of a property. The tool will provide transparency and a data-driven basis for price negotiations and investment decisions. It will be implemented in Python, using flask and various scientific packages.
+The purpose of this project is to create a predictive model and an interactive web-based tool for predicting property's energy consumption based on its features and location. This tool will aim to assist homeowners, prospective buyers and real estate professionals in estimating the potential energy consumption of a property, coupled with tailored recommendations for reducing energy use. The tool will provide transparency and valuable data-driven insights that can inform negotiations, guide investment decisions and foster a more sustainable and energy-conscious property market. It will be implemented in Python, using Flask and scikit-learn.
 
 **[coming soon]** General description of how the project will work
 
