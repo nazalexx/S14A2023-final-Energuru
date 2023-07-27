@@ -27,6 +27,7 @@ The purpose of this project is to create a predictive model and an interactive w
 
 ## Project Structure
 
+```
 S14A2023-final-Energuru/
 ├─── data/
 │    └─── energy_cleaned.parquet
@@ -59,6 +60,7 @@ S14A2023-final-Energuru/
 ├─── app.py
 ├─── requirements.txt
 └─── utils.py
+```
 
 The main components of the app are:
 
