@@ -3,25 +3,20 @@ import json
 import os
 
 
-
 app = Flask(__name__)
 
 
-
 @app.route('/')
-def get_datetime():
-    return f'Hello world!'
-
+def home():
+    return render_template('home.html')
 
 
 @app.route('/calculator')
-def get_datetime():
-    return f'Hello calculator!'
-
+def calculator():
+    return render_template('calculator.html')
 
 
 @app.route('/results')
-def get_datetime():
-    return f'Hello results!'
-
+def results():
+    return render_template('results.html')
 
