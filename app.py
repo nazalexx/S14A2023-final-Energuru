@@ -32,7 +32,7 @@ def form():
         efficient_inputs = json.load(file)
     enterable_features = [col for col in columns[1:] if col not in allowed_choices]
 
-    return render_template('calculator.html', 
+    return render_template('form.html', 
                            allowed_choices = allowed_choices, 
                            enterable_features = enterable_features, 
                            inefficient_inputs = inefficient_inputs, 
@@ -47,17 +47,19 @@ def form():
 def results(user):
 
     if request.method == 'GET':
+        with open('results.json', 'r') as file:
+            results = json.load(file)
         args = request.args
         if 'user' in args.keys():
             user = args['user']
-            # Load USER info
-            if user:
-                return render_template('result.html', user=user)
+            prediction = results[user]['prediction']
+            max_reductions = results[user]['max_reductions']
+            if user in results:
+                return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
             else:
                 return f'No results for {user} in our database :('
         else:
-            # Load all users
-            return ''
+            return render_template('results.html', results=results)
 
     elif request.method == 'POST':
         with open('allowed_choices.json', 'r') as file:
@@ -75,9 +77,5 @@ def results(user):
                 inputs[key] = int(value)
 
         prediction, max_reductions = predict_and_advise(inputs)
-
-
-@app.route('/results')
-def results():
-    return render_template('results.html')
+        return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
 
