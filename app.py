@@ -63,10 +63,23 @@ def result(user):
             return f'No results for {user} in our database :('
 
     elif request.method == 'POST':
+        if os.path.exists('results.json'):
+            with open('results.json', 'r') as file:
+                results = json.load(file)
+        else:
+            results = []
+        users = [result['user'] for result in results]
+        if user in users:
+            return f'There is already {user} in our database. Please input another user name!'
+        
         with open('allowed_choices.json', 'r') as file:
             allowed_choices = json.load(file)
         args = request.form
         inputs = {key: value if key in allowed_choices else key: int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
-        return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
+        results.append({'user': user, 'prediction': prediction, 'max_reductions': max_reductions})
+        with open('results.json', 'w') as file:
+            json.dump(results, file)
+
+        return render_template('result.html', user=user, prediction=prediction, max_reductions=max_reductions)
 
