@@ -1,6 +1,6 @@
 CSCI S14A - Building Interactive Web Applications for Data Analysis
 
-# HomeHunter
+# Energuru
 
 ## Project Plan
 
