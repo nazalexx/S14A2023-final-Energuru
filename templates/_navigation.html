@@ -1,6 +1,14 @@
-<ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Blog</li>
-    <li>Data</li>
-</ul>
+<nav class="nav nav-masthead justify-content-center float-md-end">
+    {% for nav_item in [
+    {"label":"Home", "endpoint":"/home"},
+    {"label":"About", "endpoint":"/about"},
+    {"label":"Blog", "endpoint":"/blog"},
+    {"label":"Data", "endpoint":"/data"},
+
+  ] %}
+        <a class="nav-link fw-bold py-1 px-0 {% if url_for(request.endpoint) == nav_item.endpoint %}active{% endif %}"
+           aria-current="page" href="{{ nav_item.endpoint }}">
+            {{ nav_item.label }}
+        </a>
+    {% endfor %}
+  </nav>
