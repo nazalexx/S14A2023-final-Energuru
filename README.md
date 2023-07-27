@@ -27,13 +27,38 @@ The purpose of this project is to create a predictive model and an interactive w
 
 ## Project Structure
 
-/app/ - The folder containing the app.
-/app/app.py - The main app entry point
-/app/templates - Where the templates live.
-
-/app/static - Static files, etc.
-
-/framework/ - ???.
+S14A2023-final-Energuru/
+├─── data/
+│    └─── energy_cleaned.parquet
+├─── model/
+│    ├─── allowed_choices.json
+│    ├─── average_inputs.json
+│    ├─── changeable_features.json
+│    ├─── col_descriptions.csv
+│    ├─── columns.json
+│    ├─── data_cleaning.ipynb
+│    ├─── efficient_inputs.json
+│    ├─── inefficient_inputs.json
+│    ├─── model.ipynb
+│    └─── model.joblib
+├─── static/
+├─── templates/
+│    ├─── _footer.html
+│    ├─── _navigation.html
+│    ├─── about.html
+│    ├─── base.html
+│    ├─── blog.html
+│    ├─── data.html
+│    ├─── form.html
+│    ├─── home.html
+│    ├─── index.html
+│    ├─── result.html
+│    └─── results.html
+├─── .gitignore
+├─── README.md
+├─── app.py
+├─── requirements.txt
+└─── utils.py
 
 The main components of the app are:
 
