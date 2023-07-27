@@ -35,6 +35,7 @@ def form():
     return render_template('form.html', 
                            allowed_choices = allowed_choices, 
                            enterable_features = enterable_features, 
+                           col_descriptions = col_descriptions, 
                            inefficient_inputs = inefficient_inputs, 
                            average_inputs = average_inputs, 
                            efficient_inputs = efficient_inputs,
