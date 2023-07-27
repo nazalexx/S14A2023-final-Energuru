@@ -12,7 +12,7 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 **Website Design Template**: https://getbootstrap.com/docs/5.3/examples/carousel/
 
-**Website Location**: **[coming soon]**
+**Website Location**: http://164.92.97.192:5000/
 
 ### Team Members
 
@@ -63,13 +63,10 @@ S14A2023-final-Energuru/
 └─── utils.py
 ```
 
-The main components of the app are:
+### Endpoints
 
-1. **Base** - This module contains the skeleton that the entire framework rests on. It is responsible
-   for checking for compatibility, as well as loading and securing the various sub-modules.
-
+1. **Base** -
 2. **Component X** - This component does X. It uses Google Tensorflow to do ...
-
 3. **Component Y** - This component does Y. It uses Z to add W features.
 
 ## Project Timeline
