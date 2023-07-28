@@ -8,6 +8,32 @@
 
 <style>
   /* ... (same as before) ... */
+
+  /* Show the info dialog when hovering over the i icon */
+  .info-icon:hover + .dialog {
+    display: block;
+  }
+
+  /* Style for the pop-up dialog */
+  .dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    z-index: 100;
+    /* Add a transition effect for smooth appearance/disappearance */
+    transition: display 0.2s ease-in-out;
+  }
+
+  /* Position the pop-up dialog to the right of the info sign */
+  .dialog.right {
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 10px);
+  }
 </style>
 
 <main class="form-signin w-100 m-auto">
@@ -16,40 +42,4 @@
   </form>
 </main>
 
-<script>
-  // Function to show the information dialog
-  function showInfo(infoId) {
-    const infoDialog = document.getElementById(infoId);
-    const rect = event.target.getBoundingClientRect();
-    const top = rect.top + window.scrollY;
-    const left = rect.left + window.scrollX;
-    infoDialog.style.top = `${top}px`;
-    infoDialog.style.left = `${left}px`;
-    infoDialog.style.display = "block";
-    window.addEventListener("click", (event) => {
-      if (!infoDialog.contains(event.target)) {
-        infoDialog.style.display = "none";
-      }
-    });
-  }
-
-  // Function to hide the information dialog
-  function hideInfo(infoId) {
-    const infoDialog = document.getElementById(infoId);
-    infoDialog.style.display = "none";
-  }
-
-  // Attach event handlers to the "i" symbols
-  $(document).ready(function () {
-    $('.info-icon').hover(function () {
-      var dialogId = $(this).data('dialog');
-      showInfo(dialogId);
-    }, function () {
-      var dialogId = $(this).data('dialog');
-      hideInfo(dialogId);
-    });
-  });
-</script>
-
 {% endblock %}
-
