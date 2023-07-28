@@ -45,36 +45,36 @@
         <th>Is Admin</th>
     </tr>
     <tr>
-        <td>{{ user.email }}</td>
-        <td>{{ user.phone_number }}</td>
-        <td>{{ user.updated_at }}</td>
-        <td>{{ user.status }}</td>
-        <td>{{ user.is_admin }}</td>
+        <td>{{ 1 }}</td>
+        <td>{{ 1 }}</td>
+        <td>{{ 1 }}</td>
+        <td>{{ 1 }}</td>
+        <td>{{ 1 }}</td>
     </tr>
 </table>
 
     <main class="form-signin w-100 m-auto">
-      <form method="POST" action="{{ url_for('updateuser', email=user.email) }}">
+      <form method="POST" action="{{ url_for('updateuser', email=1) }}">
         <h1>Update User</h1>
         <p class="important">
             Please update user details:
         </p>
 
         <div class="form-floating">
-          <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ user.phone_number }}">
+          <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
           <label for="floatingPhoneNumber">Phone number (required)</label>
         </div>
 
         <div class="form-floating">
-          <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ user.status }}">
+          <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ 1 }}">
           <label for="floatingStatus">Status (optional)</label>
         </div>
         
         <div class="form-floating">
           <select name="is_admin" class="form-control" id="floatingIsAdmin" placeholder="">
-            <option value="" {% if user.is_admin is none %}selected{% endif %}>Select...</option>
-            <option value="0" {% if user.is_admin == False %}selected{% endif %}>No</option>
-            <option value="1" {% if user.is_admin == True %}selected{% endif %}>Yes</option>
+            <option value="" {% if 1 is none %}selected{% endif %}>Select...</option>
+            <option value="0" {% if 1 == False %}selected{% endif %}>No</option>
+            <option value="1" {% if 1 == True %}selected{% endif %}>Yes</option>
           </select>
           <label for="floatingIsAdmin">Is admin (optional)</label>
         </div>
