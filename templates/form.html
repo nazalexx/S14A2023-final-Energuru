@@ -150,17 +150,14 @@ body {
             Please update user details:
         </p>
 
-        <div class="form-floating">
-          <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
-          <label for="floatingPhoneNumber">Phone number (required)</label>
-          <div class="hover-container">
-  <p class="hover-target" tabindex="0">Hover me, or click the gray background and tab to me</p>
-  <aside class="hover-popup">
-    <h2>Additional info here</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora similique <span>quia corporis</span> libero. In dolor qui repudiandae ullam! Corporis minus veritatis consequuntur natus. Neque, quidem?</p>
-  </aside>
-</div>
-        </div>
+            <div class="form-floating hover-container">
+      <div class="hover-popup">
+        <h2>Enter the user's phone number</h2>
+        <p>Phone number should be in the format 123-456-7890.</p>
+      </div>
+      <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
+      <label for="floatingPhoneNumber">Phone number (required) <span class="info-icon" data-dialog="infoPhoneNumber"><i class="fas fa-info-circle"></i></span></label>
+    </div>
 
         <div class="form-floating">
           <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ 1 }}">
