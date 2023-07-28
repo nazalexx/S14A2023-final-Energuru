@@ -1,8 +1,12 @@
+from flask import Flask, request, render_template, redirect, url_for
 import json
+import os
+import utils
 
-from flask import Flask, request, render_template
+
 
 app = Flask(__name__)
+
 
 
 @app.route('/')
@@ -10,24 +14,34 @@ def home():
     return render_template('home.html')
 
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
 
+
+
 @app.route('/blog')
 def blog():
     return render_template('blog.html')
+
+
+
 @app.route('/data')
 def data():
     return render_template('data.html')
+
+
 
 @app.route('/mk')
 def ml():
     return render_template('mkit/index.html')
 
 
+
 @app.route('/form', methods=['GET', 'POST'])
 def form():
+    
     with open('allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
     with open('columns.json', 'r') as file:
@@ -45,30 +59,54 @@ def form():
     userChoices = {
         'allowed_choices': allowed_choices,
         'enterable_features': enterable_features,
+        'col_descriptions' = col_descriptions, 
         'inefficient_inputs': inefficient_inputs,
         'average_inputs': average_inputs,
         'efficient_inputs': efficient_inputs,
         'default_inputs': None if request.method == 'GET' else request.form.get('default_inputs')
     }
-    return render_template('calculator.html', choices=userChoices)
+    return render_template('form.html', choices=userChoices)
+
+
+
+@app.route('/results')
+def results(user):
+    with open('results.json', 'r') as file:
+        results = json.load(file)
+        return render_template('results.html', results=results)
+
 
 
 @app.route('/results/<user>', methods=['GET', 'POST'])
-def results(user):
+def result(user):
+    
     if request.method == 'GET':
-        args = request.args
-        if 'user' in args.keys():
-            user = args['user']
-            # Load USER info
-            if user:
-                return render_template('result.html', user=user)
-            else:
-                return f'No results for {user} in our database :('
+        with open('results.json', 'r') as file:
+            results = json.load(file)
+        if user in results:
+            prediction = results[user]['prediction']
+            max_reductions = results[user]['max_reductions']
+            return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
         else:
-            # Load all users
-            return ''
+            return f'No results for {user} in our database :('
 
     elif request.method == 'POST':
+        if os.path.exists('results.json'):
+            with open('results.json', 'r') as file:
+                results = json.load(file)
+        else:
+            results = []
+        users = [result['user'] for result in results]
+        if user in users:
+            return f'There is already {user} in our database. Please input another user name!'
+        
+        with open('allowed_choices.json', 'r') as file:
+            allowed_choices = json.load(file)
         args = request.form
-        user = args['user']
-        return render_template('results.html')
+        inputs = {key: value if key in allowed_choices else key: int(value) for key, value in args.items()}
+        prediction, max_reductions = predict_and_advise(inputs)
+        results.append({'user': user, 'prediction': prediction, 'max_reductions': max_reductions})
+        with open('results.json', 'w') as file:
+            json.dump(results, file)
+
+        return render_template('result.html', user=user, prediction=prediction, max_reductions=max_reductions)
