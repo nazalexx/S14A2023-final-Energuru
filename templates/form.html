@@ -4,6 +4,41 @@
 
 {% block content %}
 
+
+
+
+
+
+<script>
+  function showInfo(infoId) {
+    // Get the information dialog element by ID
+    const infoDialog = document.getElementById(infoId);
+
+    // Calculate the position of the information sign
+    const rect = event.target.getBoundingClientRect();
+    const top = rect.top + window.scrollY;
+    const left = rect.left + window.scrollX;
+
+    // Position and show the information dialog
+    infoDialog.style.top = `${top}px`;
+    infoDialog.style.left = `${left}px`;
+    infoDialog.style.display = "block";
+
+    // Hide the information dialog when clicked outside
+    window.addEventListener("click", (event) => {
+      if (!infoDialog.contains(event.target)) {
+        infoDialog.style.display = "none";
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
 <style>
 
 .form-signin {
@@ -34,24 +69,43 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-</style>
 
-<table>
-    <tr>
-        <th>Email Address</th>
-        <th>Phone Number</th>
-        <th>Updated At</th>
-        <th>Status</th>
-        <th>Is Admin</th>
-    </tr>
-    <tr>
-        <td>{{ 1 }}</td>
-        <td>{{ 1 }}</td>
-        <td>{{ 1 }}</td>
-        <td>{{ 1 }}</td>
-        <td>{{ 1 }}</td>
-    </tr>
-</table>
+
+
+
+  
+
+.info-sign {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style for the pop-up dialog */
+.dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 100;
+}
+
+/* Position the pop-up dialog to the right of the info sign */
+.dialog.right {
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% + 10px);
+}
+</style>
 
     <main class="form-signin w-100 m-auto">
       <form method="POST" action="{{ url_for('result', user=status) }}">
@@ -61,8 +115,11 @@
         </p>
 
         <div class="form-floating">
+          <div id="infoPhoneNumber" class="dialog right">
+            <p>Enter the user's phone number in the format 123-456-7890.</p>
+          </div>
           <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
-          <label for="floatingPhoneNumber">Phone number (required)</label>
+          <label for="floatingPhoneNumber">Phone number (required) <span class="info-sign" onclick="showInfo('infoPhoneNumber')">i</span></label>
         </div>
 
         <div class="form-floating">
