@@ -7,115 +7,49 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-  .form-signin {
-    max-width: 330px;
-    padding: 1rem;
-  }
-
-  .form-signin .form-floating:focus-within {
-    z-index: 2;
-  }
-
-  .form-signin input[type="tel"] {
-    margin-bottom: 2px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .form-signin input[type="number"] {
-    margin-bottom: 2px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .form-signin select {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  .info-icon {
-    margin-left: 5px;
-    color: #666;
-    cursor: pointer;
-  }
-
-  /* Style for the pop-up dialog */
-  .dialog {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: none;
-    z-index: 100;
-  }
-
-  /* Position the pop-up dialog to the right of the info sign */
-  .dialog.right {
-    top: 50%;
-    transform: translateY(-50%);
-    left: calc(100% + 10px);
-  }
+  /* ... (same as before) ... */
 </style>
 
 <main class="form-signin w-100 m-auto">
   <form method="POST" action="{{ url_for('result', user=status) }}">
-    <h1>Update User</h1>
-    <p class="important">
-      Please update user details:
-    </p>
-
-    <div class="form-floating">
-      <div id="infoPhoneNumber" class="dialog right">
-        <p>Enter the user's phone number in the format 123-456-7890.</p>
-      </div>
-      <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
-      <label for="floatingPhoneNumber">Phone number (required) <i class="fas fa-info-circle info-icon" data-dialog="infoPhoneNumber"></i></label>
-    </div>
-
-    <div class="form-floating">
-      <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ 1 }}">
-      <label for="floatingStatus">Status (optional)</label>
-    </div>
-
-    <div class="form-floating">
-      <select name="is_admin" class="form-control" id="floatingIsAdmin" placeholder="">
-        <option value="" {% if 1 is none %}selected{% endif %}>Select...</option>
-        <option value="0" {% if 1 == False %}selected{% endif %}>No</option>
-        <option value="1" {% if 1 == True %}selected{% endif %}>Yes</option>
-      </select>
-      <label for="floatingIsAdmin">Is admin (optional)</label>
-    </div>
-
-    <button class="btn btn-primary w-100 py-2" type="submit">Add</button>
+    <!-- ... (same as before) ... -->
   </form>
 </main>
 
 <script>
   // Function to show the information dialog
-  function showInfoDialog(dialogId) {
-    $(dialogId).show();
+  function showInfo(infoId) {
+    const infoDialog = document.getElementById(infoId);
+    const rect = event.target.getBoundingClientRect();
+    const top = rect.top + window.scrollY;
+    const left = rect.left + window.scrollX;
+    infoDialog.style.top = `${top}px`;
+    infoDialog.style.left = `${left}px`;
+    infoDialog.style.display = "block";
+    window.addEventListener("click", (event) => {
+      if (!infoDialog.contains(event.target)) {
+        infoDialog.style.display = "none";
+      }
+    });
   }
 
   // Function to hide the information dialog
-  function hideInfoDialog(dialogId) {
-    $(dialogId).hide();
+  function hideInfo(infoId) {
+    const infoDialog = document.getElementById(infoId);
+    infoDialog.style.display = "none";
   }
 
   // Attach event handlers to the "i" symbols
   $(document).ready(function () {
     $('.info-icon').hover(function () {
-      var dialogId = '#' + $(this).data('dialog');
-      showInfoDialog(dialogId);
+      var dialogId = $(this).data('dialog');
+      showInfo(dialogId);
     }, function () {
-      var dialogId = '#' + $(this).data('dialog');
-      hideInfoDialog(dialogId);
+      var dialogId = $(this).data('dialog');
+      hideInfo(dialogId);
     });
   });
 </script>
 
 {% endblock %}
+
