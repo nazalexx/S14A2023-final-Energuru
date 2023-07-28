@@ -4,144 +4,97 @@
 
 {% block content %}
 
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  function showInfo(infoId) {
-    // Get the information dialog element by ID
-    const infoDialog = document.getElementById(infoId);
-
-    // Calculate the position of the information sign
-    const rect = event.target.getBoundingClientRect();
-    const top = rect.top + window.scrollY;
-    const left = rect.left + window.scrollX;
-
-    // Position and show the information dialog
-    infoDialog.style.top = `${top}px`;
-    infoDialog.style.left = `${left}px`;
-    infoDialog.style.display = "block";
-
-    // Hide the information dialog when clicked outside
-    window.addEventListener("click", (event) => {
-      if (!infoDialog.contains(event.target)) {
-        infoDialog.style.display = "none";
-      }
-    });
-  }
-</script>
-
-
-
-
-
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
+  .form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
 
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
-}
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
+  .form-signin input[type="tel"] {
+    margin-bottom: 2px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 
-.form-signin input[type="tel"] {
-  margin-bottom: 2px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
+  .form-signin input[type="number"] {
+    margin-bottom: 2px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 
-.form-signin input[type="number"] {
-  margin-bottom: 2px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
+  .form-signin select {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
-.form-signin select {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+  .info-icon {
+    margin-left: 5px;
+    color: #666;
+    cursor: pointer;
+  }
 
+  /* Style for the pop-up dialog */
+  .dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    z-index: 100;
+  }
 
-
-
-  
-
-.info-sign {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Style for the pop-up dialog */
-.dialog {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  display: none;
-  z-index: 100;
-}
-
-/* Position the pop-up dialog to the right of the info sign */
-.dialog.right {
-  top: 50%;
-  transform: translateY(-50%);
-  left: calc(100% + 10px);
-}
+  /* Position the pop-up dialog to the right of the info sign */
+  .dialog.right {
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 10px);
+  }
 </style>
 
-    <main class="form-signin w-100 m-auto">
-      <form method="POST" action="{{ url_for('result', user=status) }}">
-        <h1>Update User</h1>
-        <p class="important">
-            Please update user details:
-        </p>
+<main class="form-signin w-100 m-auto">
+  <form method="POST" action="{{ url_for('result', user=status) }}">
+    <h1>Update User</h1>
+    <p class="important">
+      Please update user details:
+    </p>
 
-        <div class="form-floating">
-          <div id="infoPhoneNumber" class="dialog right">
-            <p>Enter the user's phone number in the format 123-456-7890.</p>
-          </div>
-          <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
-          <label for="floatingPhoneNumber">Phone number (required) <span class="info-icon" data-dialog="infoPhoneNumber">i</span></label>\
-        </div>
+    <div class="form-floating">
+      <div id="infoPhoneNumber" class="dialog right">
+        <p>Enter the user's phone number in the format 123-456-7890.</p>
+      </div>
+      <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
+      <label for="floatingPhoneNumber">Phone number (required) <i class="fas fa-info-circle info-icon" data-dialog="infoPhoneNumber"></i></label>
+    </div>
 
-        <div class="form-floating">
-          <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ 1 }}">
-          <label for="floatingStatus">Status (optional)</label>
-        </div>
-        
-        <div class="form-floating">
-          <select name="is_admin" class="form-control" id="floatingIsAdmin" placeholder="">
-            <option value="" {% if 1 is none %}selected{% endif %}>Select...</option>
-            <option value="0" {% if 1 == False %}selected{% endif %}>No</option>
-            <option value="1" {% if 1 == True %}selected{% endif %}>Yes</option>
-          </select>
-          <label for="floatingIsAdmin">Is admin (optional)</label>
-        </div>
-    
-        <button class="btn btn-primary w-100 py-2" type="submit">Add</button>
+    <div class="form-floating">
+      <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ 1 }}">
+      <label for="floatingStatus">Status (optional)</label>
+    </div>
 
-      </form>
-    </main>
+    <div class="form-floating">
+      <select name="is_admin" class="form-control" id="floatingIsAdmin" placeholder="">
+        <option value="" {% if 1 is none %}selected{% endif %}>Select...</option>
+        <option value="0" {% if 1 == False %}selected{% endif %}>No</option>
+        <option value="1" {% if 1 == True %}selected{% endif %}>Yes</option>
+      </select>
+      <label for="floatingIsAdmin">Is admin (optional)</label>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <button class="btn btn-primary w-100 py-2" type="submit">Add</button>
+  </form>
+</main>
+
 <script>
   // Function to show the information dialog
   function showInfoDialog(dialogId) {
