@@ -1,8 +1,20 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 
-{% block title %}Blog Page{% endblock %}
+{% block title %}Blog{% endblock %}
 
 {% block content %}
-    <h1>Welcome To Energuru</h1>
+<main class="container mt-4">
+  <div class="bg-body-tertiary p-5 rounded mt-2">
+    <h1>Article 1</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+  </div>
 
+  <div class="bg-body-tertiary p-5 rounded mt-2">
+    <h1>Article 2</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+  </div>
+
+</main>
 {% endblock %}

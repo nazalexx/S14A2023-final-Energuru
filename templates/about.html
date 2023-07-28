@@ -1,25 +1,27 @@
-{% extends "base.html" %}
-
-{% block title %}Jayden Wang's About Page{% endblock %}
-
-{% block head %}
-    {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
-{% endblock %}
-
+{% extends "index.html" %}
 
 {% block content %}
-<h1>About Us</h1>
-    <p class="important">
-      Welcome to Energuru.
-    </p>
-    <p>Energuru is blah blah blah.</p>
-<h2>Graphs</h2>
+    <main class="container mt-4">
+        <div class="bg-body-tertiary p-5 rounded mt-2">
+            <h1>About</h1>
+            <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
+                scroll, this navbar remains in its original position and moves with the rest of the page.</p>
 
-<p>Here is a graph of our reasearch and datas</p>
-<img src="">
+        </div>
 
-    </style>
+        <div class="bg-body-tertiary p-5 rounded mt-2">
+            <h1>Model</h1>
+            <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
+                scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+
+        </div>
+
+        <div class="bg-body-tertiary p-5 rounded mt-2">
+            <h1>Team</h1>
+            <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
+                scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+
+        </div>
+
+    </main>
 {% endblock %}
