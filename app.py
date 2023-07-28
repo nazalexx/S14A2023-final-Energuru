@@ -15,6 +15,30 @@ def home():
 
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
+
+
+@app.route('/data')
+def data():
+    return render_template('data.html')
+
+
+
+@app.route('/mk')
+def ml():
+    return render_template('mkit/index.html')
+
+
+
 @app.route('/form', methods=['GET', 'POST'])
 def form():
     
@@ -32,15 +56,16 @@ def form():
         efficient_inputs = json.load(file)
     enterable_features = [col for col in columns[1:] if col not in allowed_choices]
 
-    return render_template('form.html', 
-                           allowed_choices = allowed_choices, 
-                           enterable_features = enterable_features, 
-                           col_descriptions = col_descriptions, 
-                           inefficient_inputs = inefficient_inputs, 
-                           average_inputs = average_inputs, 
-                           efficient_inputs = efficient_inputs,
-                           default_inputs = None if request.method == 'GET' else request.form.get('default_inputs')
-                          )
+    userChoices = {
+        'allowed_choices': allowed_choices,
+        'enterable_features': enterable_features,
+        'col_descriptions' = col_descriptions, 
+        'inefficient_inputs': inefficient_inputs,
+        'average_inputs': average_inputs,
+        'efficient_inputs': efficient_inputs,
+        'default_inputs': None if request.method == 'GET' else request.form.get('default_inputs')
+    }
+    return render_template('form.html', choices=userChoices)
 
 
 
@@ -49,6 +74,8 @@ def results(user):
     with open('results.json', 'r') as file:
         results = json.load(file)
         return render_template('results.html', results=results)
+
+
 
 @app.route('/results/<user>', methods=['GET', 'POST'])
 def result(user):
