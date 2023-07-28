@@ -1,1 +1,88 @@
+{% extends "index.html" %}
 
+{% block title %}Form{% endblock %}
+
+{% block content %}
+
+<style>
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="tel"] {
+  margin-bottom: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="number"] {
+  margin-bottom: 2px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin select {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>
+
+<table>
+    <tr>
+        <th>Email Address</th>
+        <th>Phone Number</th>
+        <th>Updated At</th>
+        <th>Status</th>
+        <th>Is Admin</th>
+    </tr>
+    <tr>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone_number }}</td>
+        <td>{{ user.updated_at }}</td>
+        <td>{{ user.status }}</td>
+        <td>{{ user.is_admin }}</td>
+    </tr>
+</table>
+
+    <main class="form-signin w-100 m-auto">
+      <form method="POST" action="{{ url_for('updateuser', email=user.email) }}">
+        <h1>Update User</h1>
+        <p class="important">
+            Please update user details:
+        </p>
+
+        <div class="form-floating">
+          <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ user.phone_number }}">
+          <label for="floatingPhoneNumber">Phone number (required)</label>
+        </div>
+
+        <div class="form-floating">
+          <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ user.status }}">
+          <label for="floatingStatus">Status (optional)</label>
+        </div>
+        
+        <div class="form-floating">
+          <select name="is_admin" class="form-control" id="floatingIsAdmin" placeholder="">
+            <option value="" {% if user.is_admin is none %}selected{% endif %}>Select...</option>
+            <option value="0" {% if user.is_admin == False %}selected{% endif %}>No</option>
+            <option value="1" {% if user.is_admin == True %}selected{% endif %}>Yes</option>
+          </select>
+          <label for="floatingIsAdmin">Is admin (optional)</label>
+        </div>
+    
+        <button class="btn btn-primary w-100 py-2" type="submit">Add</button>
+
+      </form>
+    </main>
+
+
+{% endblock %}
