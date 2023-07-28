@@ -8,7 +8,7 @@
 
 
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   function showInfo(infoId) {
     // Get the information dialog element by ID
@@ -119,7 +119,7 @@
             <p>Enter the user's phone number in the format 123-456-7890.</p>
           </div>
           <input type="tel" name='phone_number' class="form-control" id="floatingPhoneNumber" placeholder="123-456-7890" required value="{{ 1 }}">
-          <label for="floatingPhoneNumber">Phone number (required) <span class="info-sign" onclick="showInfo('infoPhoneNumber')">i</span></label>
+          <label for="floatingPhoneNumber">Phone number (required) <span class="info-icon" data-dialog="infoPhoneNumber">i</span></label>\
         </div>
 
         <div class="form-floating">
@@ -141,5 +141,28 @@
       </form>
     </main>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // Function to show the information dialog
+  function showInfoDialog(dialogId) {
+    $(dialogId).show();
+  }
+
+  // Function to hide the information dialog
+  function hideInfoDialog(dialogId) {
+    $(dialogId).hide();
+  }
+
+  // Attach event handlers to the "i" symbols
+  $(document).ready(function () {
+    $('.info-icon').hover(function () {
+      var dialogId = '#' + $(this).data('dialog');
+      showInfoDialog(dialogId);
+    }, function () {
+      var dialogId = '#' + $(this).data('dialog');
+      hideInfoDialog(dialogId);
+    });
+  });
+</script>
 
 {% endblock %}
