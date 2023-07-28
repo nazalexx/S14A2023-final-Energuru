@@ -1,1 +1,485 @@
-{"HVAC Heating Efficiency": ["ASHP, SEER 10, 6.2 HSPF", "ASHP, SEER 13, 7.7 HSPF", "ASHP, SEER 15, 8.5 HSPF", "Electric Baseboard, 100% Efficiency", "Electric Boiler, 100% AFUE", "Electric Furnace, 100% AFUE", "Electric Wall Furnace, 100% AFUE", "Fuel Boiler, 76% AFUE", "Fuel Boiler, 80% AFUE", "Fuel Boiler, 90% AFUE", "Fuel Furnace, 60% AFUE", "Fuel Furnace, 76% AFUE", "Fuel Furnace, 80% AFUE", "Fuel Furnace, 92.5% AFUE", "Fuel Wall/Floor Furnace, 60% AFUE", "Fuel Wall/Floor Furnace, 68% AFUE", "None", "Other", "Shared Heating"], "HVAC Heating Type and Fuel": ["Electricity ASHP", "Electricity Baseboard", "Electricity Electric Boiler", "Electricity Electric Furnace", "Electricity Electric Wall Furnace", "Electricity Shared Heating", "Fuel Oil Fuel Boiler", "Fuel Oil Fuel Furnace", "Fuel Oil Fuel Wall/Floor Furnace", "Fuel Oil Shared Heating", "Natural Gas Fuel Boiler", "Natural Gas Fuel Furnace", "Natural Gas Fuel Wall/Floor Furnace", "Natural Gas Shared Heating", "None", "Propane Fuel Boiler", "Propane Fuel Furnace", "Propane Fuel Wall/Floor Furnace", "Propane Shared Heating"], "Income, USD": ["10000-14999", "100000-119999", "120000-139999", "140000-159999", "15000-19999", "160000-179999", "180000-199999", "20000-24999", "200000+", "25000-29999", "30000-34999", "35000-39999", "40000-44999", "45000-49999", "50000-59999", "60000-69999", "70000-79999", "80000-99999", "<10000"], "ASHRAE IECC Climate Zone": ["1A", "2A - FL, GA, AL, MS", "2A - TX, LA", "2B", "3A", "3B", "3C", "4A", "4B", "4C", "5A", "5B", "6A", "6B", "7A", "7B"], "Insulation Wall": ["Brick, 12-in, 3-wythe, R-11", "Brick, 12-in, 3-wythe, R-15", "Brick, 12-in, 3-wythe, R-19", "Brick, 12-in, 3-wythe, R-7", "Brick, 12-in, 3-wythe, Uninsulated", "CMU, 6-in Hollow, R-11", "CMU, 6-in Hollow, R-15", "CMU, 6-in Hollow, R-19", "CMU, 6-in Hollow, R-7", "CMU, 6-in Hollow, Uninsulated", "Wood Stud, R-11", "Wood Stud, R-15", "Wood Stud, R-19", "Wood Stud, R-7", "Wood Stud, Uninsulated"], "Ducts": ["0% Leakage, Uninsulated", "10% Leakage, R-4", "10% Leakage, R-6", "10% Leakage, R-8", "10% Leakage, Uninsulated", "20% Leakage, R-4", "20% Leakage, R-6", "20% Leakage, R-8", "20% Leakage, Uninsulated", "30% Leakage, R-4", "30% Leakage, R-6", "30% Leakage, R-8", "30% Leakage, Uninsulated", "None"], "Water Heater Efficiency": ["Electric Heat Pump, 80 gal", "Electric Premium", "Electric Standard", "Electric Tankless", "FIXME Fuel Oil Indirect", "Fuel Oil Premium", "Fuel Oil Standard", "Natural Gas Premium", "Natural Gas Standard", "Natural Gas Tankless", "Other Fuel", "Propane Premium", "Propane Standard", "Propane Tankless"], "Geometry Wall Exterior Finish": ["Aluminum, Light", "Brick, Light", "Brick, Medium/Dark", "Fiber-Cement, Light", "None", "Shingle, Asbestos, Medium", "Shingle, Composition, Medium", "Stucco, Light", "Stucco, Medium/Dark", "Vinyl, Light", "Wood, Medium/Dark"], "HVAC Cooling Efficiency": ["AC, SEER 10", "AC, SEER 13", "AC, SEER 15", "AC, SEER 8", "Heat Pump", "None", "Room AC, EER 10.7", "Room AC, EER 12.0", "Room AC, EER 8.5", "Room AC, EER 9.8", "Shared Cooling"], "Clothes Dryer": ["Electric, 100% Usage", "Electric, 120% Usage", "Electric, 80% Usage", "Gas, 100% Usage", "Gas, 120% Usage", "Gas, 80% Usage", "None", "Propane, 100% Usage", "Propane, 120% Usage", "Propane, 80% Usage"], "Cooking Range": ["Electric, 100% Usage", "Electric, 120% Usage", "Electric, 80% Usage", "Gas, 100% Usage", "Gas, 120% Usage", "Gas, 80% Usage", "None", "Propane, 100% Usage", "Propane, 120% Usage", "Propane, 80% Usage"], "HVAC Shared Efficiencies": ["Boiler Baseboards Heating Only, Electricity", "Boiler Baseboards Heating Only, Fuel Oil", "Boiler Baseboards Heating Only, Natural Gas", "Boiler Baseboards Heating Only, Propane", "Fan Coil Cooling Only", "Fan Coil Heating and Cooling, Electricity", "Fan Coil Heating and Cooling, Fuel Oil", "Fan Coil Heating and Cooling, Natural Gas", "Fan Coil Heating and Cooling, Propane", "None"], "Windows": ["Double, Clear, Metal, Air", "Double, Clear, Metal, Air, Exterior Clear Storm", "Double, Clear, Non-metal, Air", "Double, Clear, Non-metal, Air, Exterior Clear Storm", "Double, Low-E, Non-metal, Air, M-Gain", "Single, Clear, Metal", "Single, Clear, Metal, Exterior Clear Storm", "Single, Clear, Non-metal", "Single, Clear, Non-metal, Exterior Clear Storm", "Triple, Low-E, Non-metal, Air, L-Gain"], "Geometry Building Type ACS": ["10 to 19 Unit", "2 Unit", "20 to 49 Unit", "3 or 4 Unit", "5 to 9 Unit", "50 or more Unit", "Mobile Home", "Single-Family Attached", "Single-Family Detached"], "Vintage": ["1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "<1940"], "Insulation Ceiling": ["None", "R-13", "R-19", "R-30", "R-38", "R-49", "R-7", "Uninsulated"], "Insulation Roof": ["Finished, R-13", "Finished, R-19", "Finished, R-30", "Finished, R-38", "Finished, R-49", "Finished, R-7", "Finished, Uninsulated", "Unfinished, Uninsulated"], "Clothes Washer": ["EnergyStar, 100% Usage", "EnergyStar, 120% Usage", "EnergyStar, 80% Usage", "None", "Standard, 100% Usage", "Standard, 120% Usage", "Standard, 80% Usage"], "Dishwasher": ["290 Rated kWh, 100% Usage", "290 Rated kWh, 120% Usage", "290 Rated kWh, 80% Usage", "318 Rated kWh, 100% Usage", "318 Rated kWh, 120% Usage", "318 Rated kWh, 80% Usage", "None"], "Roof Material": ["Asphalt Shingles, Medium", "Composition Shingles", "Metal, Dark", "Slate", "Tile, Clay or Ceramic", "Tile, Concrete", "Wood Shingles"], "Neighbors, ft": ["12", "2", "27", "4", "7", "Left/Right at 15ft", "None"], "Refrigerator": ["EF 10.2, 100% Usage", "EF 10.5, 100% Usage", "EF 15.9, 100% Usage", "EF 17.6, 100% Usage", "EF 19.9, 100% Usage", "EF 6.7, 100% Usage", "None"], "HVAC Cooling Partial Space Conditioning": ["100% Conditioned", "20% Conditioned", "40% Conditioned", "60% Conditioned", "80% Conditioned", "<10% Conditioned", "None"], "Extra Refrigerator": ["EF 10.2", "EF 10.5", "EF 15.9", "EF 17.6", "EF 19.9", "EF 6.7", "None"], "Geometry Foundation Type": ["Ambient", "Heated Basement", "Slab", "Unheated Basement", "Unvented Crawlspace", "Vented Crawlspace"], "Heating Fuel": ["Electricity", "Fuel Oil", "Natural Gas", "None", "Other Fuel", "Propane"], "Insulation Slab": ["2ft R10 Perimeter, Vertical", "2ft R10 Under, Horizontal", "2ft R5 Perimeter, Vertical", "2ft R5 Under, Horizontal", "None", "Uninsulated"], "Window Areas": ["F12 B12 L12 R12", "F15 B15 L15 R15", "F18 B18 L18 R18", "F30 B30 L30 R30", "F6 B6 L6 R6", "F9 B9 L9 R9"], "Insulation Floor": ["Ceiling R-13", "Ceiling R-19", "Ceiling R-30", "None", "Uninsulated"], "Insulation Foundation Wall": ["None", "Uninsulated", "Wall R-10, Exterior", "Wall R-15, Exterior", "Wall R-5, Exterior"], "Insulation Rim Joist": ["None", "R-10, Exterior", "R-15, Exterior", "R-5, Exterior", "Uninsulated"], "Water Heater Fuel": ["Electricity", "Fuel Oil", "Natural Gas", "Other Fuel", "Propane"], "Geometry Garage": ["1 Car", "2 Car", "3 Car", "None"], "Geometry Wall Type": ["Brick", "Concrete", "Steel Frame", "Wood Frame"], "HVAC Cooling Type": ["Central AC", "Heat Pump", "None", "Room AC"], "HVAC Has Shared System": ["Cooling Only", "Heating Only", "Heating and Cooling", "None"], "HVAC Heating Type": ["Ducted Heat Pump", "Ducted Heating", "Non-Ducted Heating", "None"], "Pool Heater": ["Electric", "Gas", "None", "Solar"], "Ceiling Fan": ["None", "Standard Efficiency", "Standard Efficiency, No usage"], "Geometry Attic Type": ["Finished Attic or Cathedral Ceilings", "None", "Vented Attic"], "Hot Water Fixtures": ["100% Usage", "200% Usage", "50% Usage"], "Lighting": ["100% CFL", "100% Incandescent", "100% LED"], "Hot Tub Spa": ["Electric", "Gas", "None"], "Usage Level": ["High", "Low", "Medium"], "Corridor": ["Double-Loaded Interior", "Not Applicable"], "HVAC Has Zonal Electric Heating": ["No", "Yes"], "HVAC Has Ducts": ["No", "Yes"], "Freezer": ["EF 12, National Average", "None"], "Gas Fireplace": ["Gas Fireplace", "None"], "Gas Grill": ["Gas Grill", "None"], "Gas Lighting": ["Gas Lighting", "None"], "Pool Pump": ["1.0 HP Pump", "None"], "Well Pump": ["None", "Typical Efficiency"], "Radiant Barrier": ["No", "None"], "Vacancy Status": ["Occupied", "Vacant"], "Water Heater in Unit": ["No", "Yes"]}
+{
+  "HVAC Heating Efficiency": [
+    "ASHP, SEER 10, 6.2 HSPF",
+    "ASHP, SEER 13, 7.7 HSPF",
+    "ASHP, SEER 15, 8.5 HSPF",
+    "Electric Baseboard, 100% Efficiency",
+    "Electric Boiler, 100% AFUE",
+    "Electric Furnace, 100% AFUE",
+    "Electric Wall Furnace, 100% AFUE",
+    "Fuel Boiler, 76% AFUE",
+    "Fuel Boiler, 80% AFUE",
+    "Fuel Boiler, 90% AFUE",
+    "Fuel Furnace, 60% AFUE",
+    "Fuel Furnace, 76% AFUE",
+    "Fuel Furnace, 80% AFUE",
+    "Fuel Furnace, 92.5% AFUE",
+    "Fuel Wall/Floor Furnace, 60% AFUE",
+    "Fuel Wall/Floor Furnace, 68% AFUE",
+    "None",
+    "Other",
+    "Shared Heating"
+  ],
+  "HVAC Heating Type and Fuel": [
+    "Electricity ASHP",
+    "Electricity Baseboard",
+    "Electricity Electric Boiler",
+    "Electricity Electric Furnace",
+    "Electricity Electric Wall Furnace",
+    "Electricity Shared Heating",
+    "Fuel Oil Fuel Boiler",
+    "Fuel Oil Fuel Furnace",
+    "Fuel Oil Fuel Wall/Floor Furnace",
+    "Fuel Oil Shared Heating",
+    "Natural Gas Fuel Boiler",
+    "Natural Gas Fuel Furnace",
+    "Natural Gas Fuel Wall/Floor Furnace",
+    "Natural Gas Shared Heating",
+    "None",
+    "Propane Fuel Boiler",
+    "Propane Fuel Furnace",
+    "Propane Fuel Wall/Floor Furnace",
+    "Propane Shared Heating"
+  ],
+  "Income, USD": [
+    "10000-14999",
+    "100000-119999",
+    "120000-139999",
+    "140000-159999",
+    "15000-19999",
+    "160000-179999",
+    "180000-199999",
+    "20000-24999",
+    "200000+",
+    "25000-29999",
+    "30000-34999",
+    "35000-39999",
+    "40000-44999",
+    "45000-49999",
+    "50000-59999",
+    "60000-69999",
+    "70000-79999",
+    "80000-99999",
+    "<10000"
+  ],
+  "ASHRAE IECC Climate Zone": [
+    "1A",
+    "2A - FL, GA, AL, MS",
+    "2A - TX, LA",
+    "2B",
+    "3A",
+    "3B",
+    "3C",
+    "4A",
+    "4B",
+    "4C",
+    "5A",
+    "5B",
+    "6A",
+    "6B",
+    "7A",
+    "7B"
+  ],
+  "Insulation Wall": [
+    "Brick, 12-in, 3-wythe, R-11",
+    "Brick, 12-in, 3-wythe, R-15",
+    "Brick, 12-in, 3-wythe, R-19",
+    "Brick, 12-in, 3-wythe, R-7",
+    "Brick, 12-in, 3-wythe, Uninsulated",
+    "CMU, 6-in Hollow, R-11",
+    "CMU, 6-in Hollow, R-15",
+    "CMU, 6-in Hollow, R-19",
+    "CMU, 6-in Hollow, R-7",
+    "CMU, 6-in Hollow, Uninsulated",
+    "Wood Stud, R-11",
+    "Wood Stud, R-15",
+    "Wood Stud, R-19",
+    "Wood Stud, R-7",
+    "Wood Stud, Uninsulated"
+  ],
+  "Ducts": [
+    "0% Leakage, Uninsulated",
+    "10% Leakage, R-4",
+    "10% Leakage, R-6",
+    "10% Leakage, R-8",
+    "10% Leakage, Uninsulated",
+    "20% Leakage, R-4",
+    "20% Leakage, R-6",
+    "20% Leakage, R-8",
+    "20% Leakage, Uninsulated",
+    "30% Leakage, R-4",
+    "30% Leakage, R-6",
+    "30% Leakage, R-8",
+    "30% Leakage, Uninsulated",
+    "None"
+  ],
+  "Water Heater Efficiency": [
+    "Electric Heat Pump, 80 gal",
+    "Electric Premium",
+    "Electric Standard",
+    "Electric Tankless",
+    "FIXME Fuel Oil Indirect",
+    "Fuel Oil Premium",
+    "Fuel Oil Standard",
+    "Natural Gas Premium",
+    "Natural Gas Standard",
+    "Natural Gas Tankless",
+    "Other Fuel",
+    "Propane Premium",
+    "Propane Standard",
+    "Propane Tankless"
+  ],
+  "Geometry Wall Exterior Finish": [
+    "Aluminum, Light",
+    "Brick, Light",
+    "Brick, Medium/Dark",
+    "Fiber-Cement, Light",
+    "None",
+    "Shingle, Asbestos, Medium",
+    "Shingle, Composition, Medium",
+    "Stucco, Light",
+    "Stucco, Medium/Dark",
+    "Vinyl, Light",
+    "Wood, Medium/Dark"
+  ],
+  "HVAC Cooling Efficiency": [
+    "AC, SEER 10",
+    "AC, SEER 13",
+    "AC, SEER 15",
+    "AC, SEER 8",
+    "Heat Pump",
+    "None",
+    "Room AC, EER 10.7",
+    "Room AC, EER 12.0",
+    "Room AC, EER 8.5",
+    "Room AC, EER 9.8",
+    "Shared Cooling"
+  ],
+  "Clothes Dryer": [
+    "Electric, 100% Usage",
+    "Electric, 120% Usage",
+    "Electric, 80% Usage",
+    "Gas, 100% Usage",
+    "Gas, 120% Usage",
+    "Gas, 80% Usage",
+    "None",
+    "Propane, 100% Usage",
+    "Propane, 120% Usage",
+    "Propane, 80% Usage"
+  ],
+  "Cooking Range": [
+    "Electric, 100% Usage",
+    "Electric, 120% Usage",
+    "Electric, 80% Usage",
+    "Gas, 100% Usage",
+    "Gas, 120% Usage",
+    "Gas, 80% Usage",
+    "None",
+    "Propane, 100% Usage",
+    "Propane, 120% Usage",
+    "Propane, 80% Usage"
+  ],
+  "HVAC Shared Efficiencies": [
+    "Boiler Baseboards Heating Only, Electricity",
+    "Boiler Baseboards Heating Only, Fuel Oil",
+    "Boiler Baseboards Heating Only, Natural Gas",
+    "Boiler Baseboards Heating Only, Propane",
+    "Fan Coil Cooling Only",
+    "Fan Coil Heating and Cooling, Electricity",
+    "Fan Coil Heating and Cooling, Fuel Oil",
+    "Fan Coil Heating and Cooling, Natural Gas",
+    "Fan Coil Heating and Cooling, Propane",
+    "None"
+  ],
+  "Windows": [
+    "Double, Clear, Metal, Air",
+    "Double, Clear, Metal, Air, Exterior Clear Storm",
+    "Double, Clear, Non-metal, Air",
+    "Double, Clear, Non-metal, Air, Exterior Clear Storm",
+    "Double, Low-E, Non-metal, Air, M-Gain",
+    "Single, Clear, Metal",
+    "Single, Clear, Metal, Exterior Clear Storm",
+    "Single, Clear, Non-metal",
+    "Single, Clear, Non-metal, Exterior Clear Storm",
+    "Triple, Low-E, Non-metal, Air, L-Gain"
+  ],
+  "Geometry Building Type ACS": [
+    "10 to 19 Unit",
+    "2 Unit",
+    "20 to 49 Unit",
+    "3 or 4 Unit",
+    "5 to 9 Unit",
+    "50 or more Unit",
+    "Mobile Home",
+    "Single-Family Attached",
+    "Single-Family Detached"
+  ],
+  "Vintage": [
+    "1940s",
+    "1950s",
+    "1960s",
+    "1970s",
+    "1980s",
+    "1990s",
+    "2000s",
+    "2010s",
+    "<1940"
+  ],
+  "Insulation Ceiling": [
+    "None",
+    "R-13",
+    "R-19",
+    "R-30",
+    "R-38",
+    "R-49",
+    "R-7",
+    "Uninsulated"
+  ],
+  "Insulation Roof": [
+    "Finished, R-13",
+    "Finished, R-19",
+    "Finished, R-30",
+    "Finished, R-38",
+    "Finished, R-49",
+    "Finished, R-7",
+    "Finished, Uninsulated",
+    "Unfinished, Uninsulated"
+  ],
+  "Clothes Washer": [
+    "EnergyStar, 100% Usage",
+    "EnergyStar, 120% Usage",
+    "EnergyStar, 80% Usage",
+    "None",
+    "Standard, 100% Usage",
+    "Standard, 120% Usage",
+    "Standard, 80% Usage"
+  ],
+  "Dishwasher": [
+    "290 Rated kWh, 100% Usage",
+    "290 Rated kWh, 120% Usage",
+    "290 Rated kWh, 80% Usage",
+    "318 Rated kWh, 100% Usage",
+    "318 Rated kWh, 120% Usage",
+    "318 Rated kWh, 80% Usage",
+    "None"
+  ],
+  "Roof Material": [
+    "Asphalt Shingles, Medium",
+    "Composition Shingles",
+    "Metal, Dark",
+    "Slate",
+    "Tile, Clay or Ceramic",
+    "Tile, Concrete",
+    "Wood Shingles"
+  ],
+  "Neighbors, ft": [
+    "12",
+    "2",
+    "27",
+    "4",
+    "7",
+    "Left/Right at 15ft",
+    "None"
+  ],
+  "Refrigerator": [
+    "EF 10.2, 100% Usage",
+    "EF 10.5, 100% Usage",
+    "EF 15.9, 100% Usage",
+    "EF 17.6, 100% Usage",
+    "EF 19.9, 100% Usage",
+    "EF 6.7, 100% Usage",
+    "None"
+  ],
+  "HVAC Cooling Partial Space Conditioning": [
+    "100% Conditioned",
+    "20% Conditioned",
+    "40% Conditioned",
+    "60% Conditioned",
+    "80% Conditioned",
+    "<10% Conditioned",
+    "None"
+  ],
+  "Extra Refrigerator": [
+    "EF 10.2",
+    "EF 10.5",
+    "EF 15.9",
+    "EF 17.6",
+    "EF 19.9",
+    "EF 6.7",
+    "None"
+  ],
+  "Geometry Foundation Type": [
+    "Ambient",
+    "Heated Basement",
+    "Slab",
+    "Unheated Basement",
+    "Unvented Crawlspace",
+    "Vented Crawlspace"
+  ],
+  "Heating Fuel": [
+    "Electricity",
+    "Fuel Oil",
+    "Natural Gas",
+    "None",
+    "Other Fuel",
+    "Propane"
+  ],
+  "Insulation Slab": [
+    "2ft R10 Perimeter, Vertical",
+    "2ft R10 Under, Horizontal",
+    "2ft R5 Perimeter, Vertical",
+    "2ft R5 Under, Horizontal",
+    "None",
+    "Uninsulated"
+  ],
+  "Window Areas": [
+    "F12 B12 L12 R12",
+    "F15 B15 L15 R15",
+    "F18 B18 L18 R18",
+    "F30 B30 L30 R30",
+    "F6 B6 L6 R6",
+    "F9 B9 L9 R9"
+  ],
+  "Insulation Floor": [
+    "Ceiling R-13",
+    "Ceiling R-19",
+    "Ceiling R-30",
+    "None",
+    "Uninsulated"
+  ],
+  "Insulation Foundation Wall": [
+    "None",
+    "Uninsulated",
+    "Wall R-10, Exterior",
+    "Wall R-15, Exterior",
+    "Wall R-5, Exterior"
+  ],
+  "Insulation Rim Joist": [
+    "None",
+    "R-10, Exterior",
+    "R-15, Exterior",
+    "R-5, Exterior",
+    "Uninsulated"
+  ],
+  "Water Heater Fuel": [
+    "Electricity",
+    "Fuel Oil",
+    "Natural Gas",
+    "Other Fuel",
+    "Propane"
+  ],
+  "Geometry Garage": [
+    "1 Car",
+    "2 Car",
+    "3 Car",
+    "None"
+  ],
+  "Geometry Wall Type": [
+    "Brick",
+    "Concrete",
+    "Steel Frame",
+    "Wood Frame"
+  ],
+  "HVAC Cooling Type": [
+    "Central AC",
+    "Heat Pump",
+    "None",
+    "Room AC"
+  ],
+  "HVAC Has Shared System": [
+    "Cooling Only",
+    "Heating Only",
+    "Heating and Cooling",
+    "None"
+  ],
+  "HVAC Heating Type": [
+    "Ducted Heat Pump",
+    "Ducted Heating",
+    "Non-Ducted Heating",
+    "None"
+  ],
+  "Pool Heater": [
+    "Electric",
+    "Gas",
+    "None",
+    "Solar"
+  ],
+  "Ceiling Fan": [
+    "None",
+    "Standard Efficiency",
+    "Standard Efficiency, No usage"
+  ],
+  "Geometry Attic Type": [
+    "Finished Attic or Cathedral Ceilings",
+    "None",
+    "Vented Attic"
+  ],
+  "Hot Water Fixtures": [
+    "100% Usage",
+    "200% Usage",
+    "50% Usage"
+  ],
+  "Lighting": [
+    "100% CFL",
+    "100% Incandescent",
+    "100% LED"
+  ],
+  "Hot Tub Spa": [
+    "Electric",
+    "Gas",
+    "None"
+  ],
+  "Usage Level": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "Corridor": [
+    "Double-Loaded Interior",
+    "Not Applicable"
+  ],
+  "HVAC Has Zonal Electric Heating": [
+    "No",
+    "Yes"
+  ],
+  "HVAC Has Ducts": [
+    "No",
+    "Yes"
+  ],
+  "Freezer": [
+    "EF 12, National Average",
+    "None"
+  ],
+  "Gas Fireplace": [
+    "Gas Fireplace",
+    "None"
+  ],
+  "Gas Grill": [
+    "Gas Grill",
+    "None"
+  ],
+  "Gas Lighting": [
+    "Gas Lighting",
+    "None"
+  ],
+  "Pool Pump": [
+    "1.0 HP Pump",
+    "None"
+  ],
+  "Well Pump": [
+    "None",
+    "Typical Efficiency"
+  ],
+  "Radiant Barrier": [
+    "No",
+    "None"
+  ],
+  "Vacancy Status": [
+    "Occupied",
+    "Vacant"
+  ],
+  "Water Heater in Unit": [
+    "No",
+    "Yes"
+  ]
+}

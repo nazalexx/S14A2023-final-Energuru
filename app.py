@@ -1,11 +1,9 @@
-from flask import Flask, request, render_template, redirect, url_for
 import json
-import os
-import utils
 
-
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
+
 
 
 
@@ -14,10 +12,13 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/mk')
+def ml():
+    return render_template('mkit/index.html')
+
 
 @app.route('/form', methods=['GET', 'POST'])
 def form():
-    
     with open('allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
     with open('columns.json', 'r') as file:
@@ -32,20 +33,19 @@ def form():
         efficient_inputs = json.load(file)
     enterable_features = [col for col in columns[1:] if col not in allowed_choices]
 
-    return render_template('calculator.html', 
-                           allowed_choices = allowed_choices, 
-                           enterable_features = enterable_features, 
-                           inefficient_inputs = inefficient_inputs, 
-                           average_inputs = average_inputs, 
-                           efficient_inputs = efficient_inputs,
-                           default_inputs = None if request.method == 'GET' else request.form.get('default_inputs')
-                          )
-
+    userChoices = {
+        'allowed_choices': allowed_choices,
+        'enterable_features': enterable_features,
+        'inefficient_inputs': inefficient_inputs,
+        'average_inputs': average_inputs,
+        'efficient_inputs': efficient_inputs,
+        'default_inputs': None if request.method == 'GET' else request.form.get('default_inputs')
+    }
+    return render_template('calculator.html', choices=userChoices)
 
 
 @app.route('/results/<user>', methods=['GET', 'POST'])
 def results(user):
-
     if request.method == 'GET':
         args = request.args
         if 'user' in args.keys():
@@ -62,10 +62,4 @@ def results(user):
     elif request.method == 'POST':
         args = request.form
         user = args['user']
-        for key, value
-
-
-@app.route('/results')
-def results():
-    return render_template('results.html')
-
+        return render_template('results.html')
