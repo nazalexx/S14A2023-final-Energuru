@@ -71,7 +71,7 @@ S14A2023-final-Energuru/
 ├─── README.md
 ├─── app.py
 ├─── requirements.txt
-├─── results.json (server-only)
+├─── results.json                  # (server-only)
 └─── utils.py
 ```
 
