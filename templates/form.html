@@ -7,7 +7,7 @@
 <style>
 
 .form-signin {
-  max-width: 410px;
+  max-width: 415px;
   padding: 1rem;
 }
 
@@ -22,26 +22,49 @@
 }
 
 .form-signin .form-floating #floatingUsername {
-  margin-bottom: 12px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
-
-
-.form-signin input[type="number"] {
   margin-bottom: 2px;
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
-.form-signin select {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+{% for feature in metadata['enterable_features'] %}
+  {% if loop.index == 1 %}
+    .form-signin .form-floating #floating_enterable_feature_{{ loop.index }} {
+      margin-bottom: 2px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  {% else %}
+    .form-signin .form-floating #floating_enterable_feature_{{ loop.index }} {
+      margin-bottom: 2px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  {% endif %}
+{% endfor %}
+
+{% for feature, values in metadata['allowed_choices'].items() %}
+  {% if not loop.last %}
+    #floating_choosable_feature_{{ loop.index }}.form-signin select {
+      margin-bottom: 2px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  {% else %}
+    #floating_choosable_feature_{{ loop.index }}.form-signin select {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  {% endif %}
+{% endfor %}
+  
 </style>
+
 
     <main class="form-signin w-100 m-auto">
       <form method="POST" action="{{ url_for('result', user=status) }}">
@@ -82,25 +105,6 @@
           <label for="floating_choosable_feature_{{ loop.index }}">{{ feature }}</label>
         </div>
         {% endfor %}
-
-
-        
-       
-        <div class="form-floating">
-          <input type="number" name='status' class="form-control" id="floatingChoosable" placeholder="0" min="0" value="{{ 1 }}">
-          <label for="floatingStatus">Status (optional)</label>
-        </div>
-        
-        <div class="form-floating">
-          <select name="is_admin" class="form-control" id="floatingIsAdmin" placeholder="">
-            <option value="" {% if 1 is none %}selected{% endif %}>Select...</option>
-            <option value="0" {% if 1 == False %}selected{% endif %}>No</option>
-            <option value="1" {% if 1 == True %}selected{% endif %}>Yes</option>
-          </select>
-          <label for="floatingIsAdmin">Is admin (optional)</label>
-        </div>
-
-        
     
         <button class="btn btn-primary w-100 py-2" type="submit">Add</button>
 
