@@ -7,7 +7,7 @@
 <style>
 
 .form-signin {
-  max-width: 330px;
+  max-width: 430px;
   padding: 1rem;
 }
 
@@ -15,17 +15,20 @@
   z-index: 2;
 }
 
-.form-signin input[type="text"] {
+.form-signin .form-floating #floatingFirstname {
+  /* Specific styling for the input with id "floatingFirstname" */
   margin-bottom: 2px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.form-signin input[type="text"] {
+.form-signin .form-floating #floatingFirstname {
+  /* Specific styling for the input with id "floatingFirstname" */
   margin-bottom: 12px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
+
 
 .form-signin input[type="number"] {
   margin-bottom: 2px;
@@ -46,7 +49,7 @@
       <form method="POST" action="{{ url_for('result', user=status) }}">
         <h1>Form</h1>
         <p class="important">
-            Please provide enter your first name and (unique) username:
+            Please enter your first name and (unique) username:
         </p>
 
         <div class="form-floating">
@@ -55,9 +58,13 @@
         </div>
 
         <div class="form-floating">
-          <input type="text" name='username' class="form-control" id="floatingUsername" placeholder="john_doe" required value="{{ john_doe }}">
+          <input type="text" name='username' class="form-control" id="floatingUsername" placeholder="john_doe" required value="Double, Clear, Non-metal, Air, Exterior Clear Storm">
           <label for="floatingUsername">Username</label>
         </div>
+
+        <p class="important">
+            Please provide the property's details:
+        </p>
 
         <div class="form-floating">
           <input type="number" name='status' class="form-control" id="floatingStatus" placeholder="0" min="0" value="{{ 1 }}">
