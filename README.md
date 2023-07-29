@@ -43,6 +43,11 @@ The process documented in `/model/model.ipynb` contains some additional minor da
 
 The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's features. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
 
+## Challenges
+- Getting info boxes to work with or without JS
+- Splitting the form into 3 columns for the computer version
+- ...
+
 
 ## Project Structure
 
@@ -82,10 +87,25 @@ S14A2023-final-Energuru/
 └─── utils.py
 ```
 
+### Templates
+
+#### index.html
+...
+
+#### form.html
+...
+
+#### result.html
+...
+
+#### results.html
+...
+
+
 ### Endpoints
 
 #### /
-- **GET**: Displayes the index template (main page).
+- **GET**: Displays the index template (main page).
 
 #### /form
 - **GET**: Takes all the necessary information from the json files and renders the form template with it.
