@@ -34,10 +34,8 @@ The (reproducible) data cleaning process is documented in `/model/data_cleaning.
 ### Data Reformatting and Model Creation
 The process documented in `/model/model.ipynb` contains some additional minor data cleaning as well as converts the data file from csv to parquet format, for faster reading efficiency and ability to upload to GitHub. The notebook then defines changeable and unchangeable features, which were determined via a thorough and extensive data exploration. The column titles are then reformatted for better readability on the website. Some code elements from the aforementioned project by Nazarovs et al. were borrowed to train the model yet the model itself (namely, histogram-based gradient boosting regressor) was tuned and trained on the updated data. The model was saved as a joblib file, to use it from within the app. The notebook then generates three mock inputs (to be offered to fill out the form by on the website): one for "inefficient", one for "average" and one for "efficient" dwelling unit in terms of energy consumption. The notebook also defines a function to convert user inputs (dictionary without dummy variables) into model input (pandas.DataFrame with dummy variables) as well as a function to generate prediction and biggest possible consumption reductions by feature. Finally, the notebook saves the necessary data (changeable features, feature names and possible values, the three inputs, etc.) into json files.
 
-### Website general description and how it will work
-...
-
-
+### App Description
+The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's features. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
    
 ## Project Structure
 
