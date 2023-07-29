@@ -41,29 +41,24 @@ def ml():
 
 @app.route('/form', methods=['GET', 'POST'])
 def form():
-    
     with open('model/allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
     with open('model/columns.json', 'r') as file:
         columns = json.load(file)
     with open('model/col_descriptions.json', 'r') as file:
         col_descriptions = json.load(file)
-    with open('model/inefficient_inputs.json', 'r') as file:
-        inefficient_inputs = json.load(file)
-    with open('model/average_inputs.json', 'r') as file:
-        average_inputs = json.load(file)
-    with open('model/efficient_inputs.json', 'r') as file:
-        efficient_inputs = json.load(file)
     enterable_features = [col for col in columns[1:] if col.split(' / ')[0] not in allowed_choices]
-
+    
+    if request.method == 'POST':
+        autofill = request.form.get('default_inputs')
+        with open('model/' + autofill + '.json', 'r') as file:
+            autofill = json.load(file)
+    
     metadata = {
         'allowed_choices': allowed_choices,
         'enterable_features': enterable_features,
         'col_descriptions': col_descriptions, 
-        'inefficient_inputs': inefficient_inputs,
-        'average_inputs': average_inputs,
-        'efficient_inputs': efficient_inputs,
-        'default_inputs': None if request.method == 'GET' else request.form.get('default_inputs')
+        'autofill': None if request.method == 'GET' else autofill
     }
     return render_template('form.html', metadata=metadata)
 
