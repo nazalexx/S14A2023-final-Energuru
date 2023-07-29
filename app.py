@@ -54,7 +54,7 @@ def form():
         average_inputs = json.load(file)
     with open('model/efficient_inputs.json', 'r') as file:
         efficient_inputs = json.load(file)
-    enterable_features = [col for col in columns[1:] if col not in allowed_choices]
+    enterable_features = [col for col in columns[1:] if col.split(' / ')[0] not in allowed_choices]
 
     metadata = {
         'allowed_choices': allowed_choices,
