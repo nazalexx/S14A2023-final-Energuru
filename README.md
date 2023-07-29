@@ -94,13 +94,11 @@ Aleksejs Nazarovs:
 1. Task 1 **IN PROCESS**
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
-
 ​
 Jayden Wang:
 1. Task 1 **IN PROCESS**
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
-
 
 All:
 1. Agree on revised data topic **COMPLETE**
@@ -127,7 +125,49 @@ All:
 1. Task 1 **IN PROCESS**
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
-   ​
+
+
+### Milestone 4 Tasks
+
+
+Aleksejs Nazarovs:
+1. Build a model **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+​
+Jayden Wang:
+1. Play with data **IN PROCESS**
+2. Build charts **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+All:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+### Milestone 5 Tasks
+
+
+Aleksejs Nazarovs:
+1. Build a model **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+​
+Jayden Wang:
+1. Play with data **IN PROCESS**
+2. Build charts **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+All:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**​
+
 
 ## References & Citations
 
