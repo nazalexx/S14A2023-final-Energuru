@@ -22,7 +22,7 @@
 }
 
 .form-signin .form-floating #floatingUsername {
-  margin-bottom: 2px;
+  margin-bottom: 10px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -65,51 +65,68 @@
   
 </style>
 
+<main class="form-signin w-100 m-auto">
+  <form method="POST" action="{{ url_for('result', user=status) }}">
+    <h1>Form</h1>
+    <p class="important">
+        Please enter your first name and (unique) username:
+    </p>
 
-    <main class="form-signin w-100 m-auto">
-      <form method="POST" action="{{ url_for('result', user=status) }}">
-        <h1>Form</h1>
-        <p class="important">
-            Please enter your first name and (unique) username:
-        </p>
+    <div class="form-floating">
+      <input type="text" name='firstname' class="form-control" id="floatingFirstname" placeholder="John" required value="{{ None }}">
+      <label for="floatingFirstname">Name</label>
+    </div>
 
-        <div class="form-floating">
-          <input type="text" name='firstname' class="form-control" id="floatingFirstname" placeholder="John" required value="{{ None }}">
-          <label for="floatingFirstname">Name</label>
-        </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Get results</button>
 
-        <div class="form-floating">
-          <input type="text" name='username' class="form-control" id="floatingUsername" placeholder="john_doe" required value={{ none }}>
-          <label for="floatingUsername">Username</label>
-        </div>
+  </form>
+</main>
 
-        <p class="important">
-            Please provide the property's details:
-        </p>
 
-        {% for feature in metadata['enterable_features'] %}
-        <div class="form-floating">
-          <input type="number" name={{ feature }} class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['default_inputs'] is not none %}value={{ metadata['default_inputs'][feature] }}{% endif %}>
-          <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
-        </div>
-        {% endfor %}
-        
-        {% for feature, values in metadata['allowed_choices'].items() %}
-        <div class="form-floating">
-          <select name={{ feature }} class="form-control" id="floating_choosable_feature_{{ loop.index }}" required>
-            <option value="" {% if metadata['default_inputs'] is none %}selected{% endif %}>Select...</option>
-            {% for value in values %}
-            <option value={{ value }} {% if metadata['default_inputs'] is not none and metadata['default_inputs'][feature] == value %}selected{% endif %}>{{ value }}</option>
-            {% endfor %}
-          </select>
-          <label for="floating_choosable_feature_{{ loop.index }}">{{ feature }}</label>
-        </div>
-        {% endfor %}
+<main class="form-signin w-100 m-auto">
+  <form method="POST" action="{{ url_for('result', user=status) }}">
+    <h1>Form</h1>
+    <p class="important">
+        Please enter your first name and (unique) username:
+    </p>
+
+    <div class="form-floating">
+      <input type="text" name='firstname' class="form-control" id="floatingFirstname" placeholder="John" required value="{{ None }}">
+      <label for="floatingFirstname">Name</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="text" name='username' class="form-control" id="floatingUsername" placeholder="john_doe" required value={{ none }}>
+      <label for="floatingUsername">Username</label>
+    </div>
+
+    <p class="important">
+        Please provide the property's details:
+    </p>
+
+    {% for feature in metadata['enterable_features'] %}
+    <div class="form-floating">
+      <input type="number" name={{ feature }} class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['default_inputs'] is not none %}value={{ metadata['default_inputs'][feature] }}{% endif %}>
+      <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
+    </div>
+    {% endfor %}
     
-        <button class="btn btn-primary w-100 py-2" type="submit">Add</button>
+    {% for feature, values in metadata['allowed_choices'].items() %}
+    <div class="form-floating">
+      <select name={{ feature }} class="form-control" id="floating_choosable_feature_{{ loop.index }}" required>
+        <option value="" {% if metadata['default_inputs'] is none %}selected{% endif %}>Select...</option>
+        {% for value in values %}
+        <option value={{ value }} {% if metadata['default_inputs'] is not none and metadata['default_inputs'][feature] == value %}selected{% endif %}>{{ value }}</option>
+        {% endfor %}
+      </select>
+      <label for="floating_choosable_feature_{{ loop.index }}">{{ feature }}</label>
+    </div>
+    {% endfor %}
 
-      </form>
-    </main>
+    <button class="btn btn-primary w-100 py-2" type="submit">Get results</button>
+
+  </form>
+</main>
 
 
 {% endblock %}
