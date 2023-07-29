@@ -30,10 +30,10 @@ The purpose of this project is to create a predictive model and an interactive w
 ```
 S14A2023-final-Energuru/
 ├─── data/
-│    └─── energy_cleaned.parquet
+│    └─── energy_cleaned.parquet # Cleaned data that was used to train the model
 ├─── model/
-│    ├─── allowed_choices.json
-│    ├─── average_inputs.json
+│    ├─── allowed_choices.json # Allowed choices for features with string inputs (converted to dummy variables for training & prediction)
+│    ├─── average_inputs.json # Generated inputs for an average property in terms of energy consumption
 │    ├─── changeable_features.json
 │    ├─── col_descriptions.csv
 │    ├─── columns.json
