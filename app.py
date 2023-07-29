@@ -99,7 +99,7 @@ def result(username):
         args = request.form
         inputs = {key: value if key in allowed_choices else int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
-        result = {'name': inputs['name'], 
+        result = {'firstname': inputs['firstname'], 
                   'username': inputs['username'], 
                   'prediction': prediction, 
                   'max_reductions': max_reductions
