@@ -3,3 +3,4 @@ Jinja2
 gunicorn
 json
 joblib
+scikit-learn
