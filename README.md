@@ -108,15 +108,15 @@ S14A2023-final-Energuru/
 - **GET**: Displays the index template (main page).
 
 #### /form
-- **GET**: Takes all the necessary information from the json files and renders the form template with it.
-- **POST**: This method is in action when the user chooses to autofill the form. In this case, the autofill criteria (to autofill with efficient, average or inefficient inputs) is also passed to the form template.
+- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it.
+- **POST**: This method is in action when the user chooses to autofill the form. In this case, the autofill criteria (to autofill with efficient, average or inefficient inputs) is also passed to the `form.html` template.
 
 #### /results
-- **GET**: Just displays all the historical results of the website.
+- **GET**: Just displays all the historical results of the website by rendering the `results.html` template.
 
 #### /results/&lt;username&gt;
 - **GET**: Just displays the result for this particular username if it exists in the database or an error if it does not.
-- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned.
+- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned. If not, the inputs are passed to the `predict_and_advise` function from `utils.py`. The database gets updated with the new result and it gets passed to the `result.html` template.
 
 
 ## Project Timeline
