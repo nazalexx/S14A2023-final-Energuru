@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, redirect, url_for
 import os
+import json
 import utils
 
 
@@ -55,7 +56,7 @@ def form():
         efficient_inputs = json.load(file)
     enterable_features = [col for col in columns[1:] if col not in allowed_choices]
 
-    metadata = {
+    userChoices = {
         'allowed_choices': allowed_choices,
         'enterable_features': enterable_features,
         'col_descriptions': col_descriptions, 
@@ -64,7 +65,7 @@ def form():
         'efficient_inputs': efficient_inputs,
         'default_inputs': None if request.method == 'GET' else request.form.get('default_inputs')
     }
-    return render_template('form.html', metadata=metadata)
+    return render_template('form.html', choices=userChoices)
 
 
 
