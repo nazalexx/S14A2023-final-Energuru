@@ -91,7 +91,7 @@ S14A2023-final-Energuru/
 #### /results/
 - **GET**: Just displays all the historical results of the website.
 
-#### /results/<username>
+#### /results/&lt;username&gt;
 - **GET**: Just displays the result for this particular username if it exists in the database or an error if it does not.
 - **POST**: This method is in action upon submitting the form. 
 
