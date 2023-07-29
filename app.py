@@ -58,6 +58,9 @@ def form():
     metadata = {'allowed_choices': allowed_choices,
                 'enterable_features': enterable_features,
                 'col_descriptions': col_descriptions, 
+                'options_for_autofill': {'inefficient_inputs': 'Random inefficient dwelling unit', 
+                                         'average_inputs': 'Random average dwelling unit', 
+                                         'efficient_inputs': 'Random efficient dwelling unit'}
                 'autofill': None if request.method == 'GET' else autofill
                }
     return render_template('form.html', metadata=metadata)
