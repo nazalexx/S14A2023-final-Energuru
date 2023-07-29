@@ -50,17 +50,20 @@ def form():
     enterable_features = [col for col in columns[1:] if col.split(' / ')[0] not in allowed_choices]
     
     if request.method == 'POST':
-        autofill = request.form.get('autofill')
-        if autofill is not None:
+        autofill_name = request.form.get('autofill_name')
+        if autofill_name is not None:
             with open('model/' + autofill + '.json', 'r') as file:
                 autofill = json.load(file)
+        else:
+            autofill = None
     
     metadata = {'allowed_choices': allowed_choices,
                 'enterable_features': enterable_features,
                 'col_descriptions': col_descriptions, 
                 'options_for_autofill': {'inefficient_inputs': 'Random inefficient dwelling unit', 
                                          'average_inputs': 'Random average dwelling unit', 
-                                         'efficient_inputs': 'Random efficient dwelling unit'}
+                                         'efficient_inputs': 'Random efficient dwelling unit'}, 
+                'autofill_name': None if request.method == 'GET' else autofill_name, 
                 'autofill': None if request.method == 'GET' else autofill
                }
     return render_template('form.html', metadata=metadata)
