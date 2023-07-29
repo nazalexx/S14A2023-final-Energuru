@@ -23,8 +23,13 @@ CSCI S14A - Building Interactive Web Applications for Data Analysis
 
 The purpose of this project is to create a predictive model and an interactive web-based tool for predicting property's energy consumption based on its features and location. This tool will aim to assist homeowners, prospective buyers and real estate professionals in estimating the potential energy consumption of a property, coupled with tailored recommendations for reducing energy use. The tool will provide transparency and valuable data-driven insights that can inform negotiations, guide investment decisions and foster a more sustainable and energy-conscious property market. It will be implemented in Python, using Flask and scikit-learn.
 
-**[coming soon]** General description of how the project will work
+## Project Description
 
+1. Data description + source
+2. Data cleaning (cite)
+3. Model creation + reformatting everything for the website to work
+4. Website general description and how it will work
+   
 ## Project Structure
 
 ```
@@ -32,16 +37,16 @@ S14A2023-final-Energuru/
 ├─── data/
 │    └─── energy_cleaned.parquet # Cleaned data that was used to train the model
 ├─── model/
-│    ├─── allowed_choices.json # Allowed choices for features with string inputs (converted to dummy variables for training & prediction)
+│    ├─── allowed_choices.json # Choices to select from for features with string inputs
 │    ├─── average_inputs.json # Generated inputs for an average property in terms of energy consumption
-│    ├─── changeable_features.json
-│    ├─── col_descriptions.csv
-│    ├─── columns.json
-│    ├─── data_cleaning.ipynb
-│    ├─── efficient_inputs.json
-│    ├─── inefficient_inputs.json
-│    ├─── model.ipynb
-│    └─── model.joblib
+│    ├─── changeable_features.json # Features that the app can offer to change
+│    ├─── col_descriptions.csv # Descriptions of each feature in the (cleaned) dataset
+│    ├─── columns.json # Columns in the dataset
+│    ├─── data_cleaning.ipynb # Notebook containing the whole data cleaning process
+│    ├─── efficient_inputs.json # Generated inputs for an efficient property in terms of energy consumption
+│    ├─── inefficient_inputs.json # Generated inputs for an inefficient property in terms of energy consumption
+│    ├─── model.ipynb # Notebook containing model creation, changeable feature selection, input generation, etc.
+│    └─── model.joblib # Model itself
 ├─── static/
 ├─── templates/
 │    ├─── _footer.html
