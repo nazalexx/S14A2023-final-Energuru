@@ -54,36 +54,35 @@ def form():
         with open('model/' + autofill + '.json', 'r') as file:
             autofill = json.load(file)
     
-    metadata = {
-        'allowed_choices': allowed_choices,
-        'enterable_features': enterable_features,
-        'col_descriptions': col_descriptions, 
-        'autofill': None if request.method == 'GET' else autofill
-    }
+    metadata = {'allowed_choices': allowed_choices,
+                'enterable_features': enterable_features,
+                'col_descriptions': col_descriptions, 
+                'autofill': None if request.method == 'GET' else autofill
+               }
     return render_template('form.html', metadata=metadata)
 
 
 
 @app.route('/results')
-def results(user):
+def results():
     with open('results.json', 'r') as file:
         results = json.load(file)
         return render_template('results.html', results=results)
 
 
 
-@app.route('/results/<user>', methods=['GET', 'POST'])
-def result(user):
+@app.route('/results/<username>', methods=['GET', 'POST'])
+def result(username):
     
     if request.method == 'GET':
         with open('results.json', 'r') as file:
             results = json.load(file)
-        if user in results:
-            prediction = results[user]['prediction']
-            max_reductions = results[user]['max_reductions']
+        if username in results:
+            prediction = results[username]['prediction']
+            max_reductions = results[username]['max_reductions']
             return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
         else:
-            return f'No results for {user} in our database :('
+            return f'No results for {username} in our database :('
 
     elif request.method == 'POST':
         if os.path.exists('results.json'):
@@ -91,18 +90,23 @@ def result(user):
                 results = json.load(file)
         else:
             results = []
-        users = [result['user'] for result in results]
-        if user in users:
-            return f'There is already {user} in our database. Please input another user name!'
+        usernames = [result['username'] for result in results]
+        if username in usernames:
+            return f'There is already {username} in our database. Please input another username!'
         
         with open('model/allowed_choices.json', 'r') as file:
             allowed_choices = json.load(file)
         args = request.form
         inputs = {key: value if key in allowed_choices else int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
-        results.append({'user': user, 'prediction': prediction, 'max_reductions': max_reductions})
+        result = {'name': inputs['name'], 
+                  'username': inputs['username'], 
+                  'prediction': prediction, 
+                  'max_reductions': max_reductions
+                 }
+        results.append(result)
         with open('results.json', 'w') as file:
             json.dump(results, file)
 
-        return render_template('result.html', user=user, prediction=prediction, max_reductions=max_reductions)
+        return render_template('result.html', result=result)
 
