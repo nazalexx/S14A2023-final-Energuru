@@ -1,4 +1,4 @@
-CSCI S14A - Building Interactive Web Applications for Data Analysis
+CSCI S-14A - Building Interactive Web Applications for Data Analysis
 
 # Energuru
 
@@ -28,8 +28,11 @@ The purpose of this project is to create a predictive model and an interactive w
 ### Data Description
 #### End-Use Load Profiles for the U.S. Building Stock
 The National Renewable Energy Laboratory (NREL) and its research partners [have developed](https://www.nrel.gov/buildings/end-use-load-profiles.html) a database of end-use load profiles (EULP) representing all major end uses, building types, and climate regions in the U.S. commercial and residential building stock. The particular database `baseline_metadata_and_annual_results.csv` (1.5 GB) with approximately 550,000 residential buildings nationwide can be downloaded [here](https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=nrel-pds-building-stock%2Fend-use-load-profiles-for-us-building-stock%2F2022%2Fresstock_amy2018_release_1%2Fmetadata_and_annual_results%2Fnational%2Fcsv%2F).
+
 ### Data Cleaning
-gfg
+The (reproducible) data cleaning process is documented in /model/data_cleaning.ipynb. The notebook was written by Aleksejs Nazarovs, Ari Neumann, Melina Sotiriou Droz and Sergei Zhits as part of the final project for CSCI E-109A Introduction to Data Science at Harvard Extension School. It goes over each column of the raw dataset, deletes columns with no information and those irrelevant to (total) energy consumption prediction as well as tries to eliminate variables which contain the same information as some others. The notebook also makes sure all the variables are assigned the simplest possible data type. Finally, it converts categorical variables into dummy binary variables. The only change that was made to this notebook as part of this CSCI S-14A project was that the process of dummy variable creation does not exclude the first category anymore. It simplifies user inputs convertion into model inputs but does not cause overfitting since the only model class used for this project is gradient boosting.
+
+### Model creation
 3. Model creation + reformatting everything for the website to work
 4. Website general description and how it will work
    
