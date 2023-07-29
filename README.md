@@ -95,10 +95,12 @@ Aleksejs Nazarovs:
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
 ​
+
 Jayden Wang:
 1. Task 1 **IN PROCESS**
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
+
 
 All:
 1. Agree on revised data topic **COMPLETE**
