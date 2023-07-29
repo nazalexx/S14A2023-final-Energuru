@@ -25,7 +25,11 @@ The purpose of this project is to create a predictive model and an interactive w
 
 ## Project Description
 
-1. Data description + source
+### Data description
+#### End-Use Load Profiles for the U.S. Building Stock
+The National Renewable Energy Laboratory (NREL) and its research partners [have developed](https://www.nrel.gov/buildings/end-use-load-profiles.html) a database of end-use load profiles (EULP) representing all major end uses, building types, and climate regions in the U.S. commercial and residential building stock. The particular database `baseline_metadata_and_annual_results.csv` (1.5 GB) with approximately 550,000 residential buildings nationwide is available for downloading [here](https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=nrel-pds-building-stock%2Fend-use-load-profiles-for-us-building-stock%2F2022%2Fresstock_amy2018_release_1%2Fmetadata_and_annual_results%2Fnational%2Fcsv%2F).
+
+
 2. Data cleaning (cite)
 3. Model creation + reformatting everything for the website to work
 4. Website general description and how it will work
