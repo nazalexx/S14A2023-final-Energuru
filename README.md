@@ -19,9 +19,11 @@ CSCI S-14A - Building Interactive Web Applications for Data Analysis
 - Aleksejs Nazarovs - aln755@g.harvard.edu
 - Jayden Wang - jaw0880@g.harvard.edu
 
+
 ## Project Basics
 
 The purpose of this project is to create a predictive model and an interactive web-based tool for predicting property's energy consumption based on its features and location. This tool will aim to assist homeowners, prospective buyers and real estate professionals in estimating the potential energy consumption of a property, coupled with tailored recommendations for reducing energy use. The tool will provide transparency and valuable data-driven insights that can inform negotiations, guide investment decisions and foster a more sustainable and energy-conscious property market. It will be implemented in Python, using Flask and scikit-learn.
+
 
 ## Project Description
 
@@ -40,7 +42,8 @@ The process documented in `/model/model.ipynb` contains some additional minor da
 ### App Description
 
 The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's features. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
-   
+
+
 ## Project Structure
 
 ```
@@ -82,18 +85,19 @@ S14A2023-final-Energuru/
 ### Endpoints
 
 #### /
-
+- **GET**: Displayes the index template (main page).
 
 #### /form
 - **GET**: Takes all the necessary information from the json files and renders the form template with it.
 - **POST**: This method is in action when the user chooses to autofill the form. In this case, the autofill criteria (to autofill with efficient, average or inefficient inputs) is also passed to the form template.
 
-#### /results/
+#### /results
 - **GET**: Just displays all the historical results of the website.
 
 #### /results/&lt;username&gt;
 - **GET**: Just displays the result for this particular username if it exists in the database or an error if it does not.
-- **POST**: This method is in action upon submitting the form. 
+- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned.
+
 
 ## Project Timeline
 
