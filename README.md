@@ -35,18 +35,18 @@ The purpose of this project is to create a predictive model and an interactive w
 ```
 S14A2023-final-Energuru/
 ├─── data/
-│    └─── energy_cleaned.parquet # Cleaned data that was used to train the model
+│    └─── energy_cleaned.parquet   # Cleaned data that was used to train the model
 ├─── model/
-│    ├─── allowed_choices.json # Choices to select from for features with string inputs
-│    ├─── average_inputs.json # Generated inputs for an average property in terms of energy consumption
+│    ├─── allowed_choices.json     # Choices to select from for features with string inputs
+│    ├─── average_inputs.json      # Generated inputs for an average property in terms of energy consumption
 │    ├─── changeable_features.json # Features that the app can offer to change
-│    ├─── col_descriptions.csv # Descriptions of each feature in the (cleaned) dataset
-│    ├─── columns.json # Columns in the dataset
-│    ├─── data_cleaning.ipynb # Notebook containing the whole data cleaning process
-│    ├─── efficient_inputs.json # Generated inputs for an efficient property in terms of energy consumption
-│    ├─── inefficient_inputs.json # Generated inputs for an inefficient property in terms of energy consumption
-│    ├─── model.ipynb # Notebook containing model creation, changeable feature selection, input generation, etc.
-│    └─── model.joblib # Model itself
+│    ├─── col_descriptions.csv     # Descriptions of each feature in the (cleaned) dataset
+│    ├─── columns.json             # Columns in the dataset
+│    ├─── data_cleaning.ipynb      # Notebook containing the whole data cleaning process
+│    ├─── efficient_inputs.json    # Generated inputs for an efficient property in terms of energy consumption
+│    ├─── inefficient_inputs.json  # Generated inputs for an inefficient property in terms of energy consumption
+│    ├─── model.ipynb              # Notebook with model creation, changeable feature selection, input generation, etc.
+│    └─── model.joblib             # Model itself
 ├─── static/
 ├─── templates/
 │    ├─── _footer.html
