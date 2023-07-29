@@ -64,12 +64,12 @@
             Please provide the property's details:
         </p>
         
-        {% for feature, values in userChoices['allowed_choices'].items() %}
+        {% for feature, values in metadata['allowed_choices'].items() %}
         <div class="form-floating">
           <select name={{ feature }} class="form-control" id="floating_choosable_features_{{ loop.index }}" required>
-            <option value="" {% if userChoices['default_inputs'] is none %}selected{% endif %}>Select...</option>
+            <option value="" {% if metadata['default_inputs'] is none %}selected{% endif %}>Select...</option>
             {% for value in values %}
-            <option value={{ value }} {% if userChoices['default_inputs'] is not none and userChoices['default_inputs'][feature] == value %}selected{% endif %}>{{ value }}</option>
+            <option value={{ value }} {% if metadata['default_inputs'] is not none and metadata['default_inputs'][feature] == value %}selected{% endif %}>{{ value }}</option>
             {% endfor %}
           </select>
           <label for="floating_choosable_features_{{ loop.index }}">{{ feature }}</label>
