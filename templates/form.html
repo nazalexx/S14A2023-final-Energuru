@@ -67,7 +67,7 @@
         {% for feature in metadata['enterable_features'] %}
         <div class="form-floating">
           <input type="number" name={{ feature }} class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['default_inputs'] is not none %}value={{ metadata['default_inputs'][feature] }}{% endif %}>
-          <label for="floating_enterable_feature_{{ loop.index }}">{{ feature }}</label>
+          <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
         </div>
         {% endfor %}
         
