@@ -52,7 +52,7 @@ def form():
     if request.method == 'POST':
         autofill_name = request.form.get('autofill_name')
         if autofill_name is not None:
-            with open('model/' + autofill + '.json', 'r') as file:
+            with open('model/' + autofill_name + '.json', 'r') as file:
                 autofill = json.load(file)
         else:
             autofill = None
