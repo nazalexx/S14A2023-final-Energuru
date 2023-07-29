@@ -47,7 +47,7 @@
 
 {% for feature, values in metadata['allowed_choices'].items() %}
   {% if not loop.last %}
-    #floating_choosable_feature_{{ loop.index }}.form-signin select {
+    .form-signin .form-floating #floating_choosable_feature_{{ loop.index }} {
       margin-bottom: 2px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -55,7 +55,7 @@
       border-bottom-left-radius: 0;
     }
   {% else %}
-    #floating_choosable_feature_{{ loop.index }}.form-signin select {
+    .form-signin .form-floating #floating_choosable_feature_{{ loop.index }} {
       margin-bottom: 10px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
