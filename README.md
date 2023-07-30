@@ -43,14 +43,13 @@ The process documented in `/model/model.ipynb` contains some additional minor da
 
 The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's features. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
 
+
 ## Challenges
 - Getting info boxes to work with or without JS
 - Splitting the form into 3 columns for the computer version
+- Reduce the current prediction time of 20 seconds (vectorize the loop) and/or add a progress bar
 - ...
 
-## Plans
-- Reduce the current prediction time of 20 seconds (vectorize the loop) and/or add a progress bar
-- 
 
 ## Project Structure
 
