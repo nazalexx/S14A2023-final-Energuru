@@ -250,7 +250,3 @@ All:
 
 - The Stanford GraphBase: A Platform for Combinatorial Computing by Donald E. Knuth (New York: ACM Press, 1994), viii+576pp.
 https://www-cs-faculty.stanford.edu/~knuth/sgb.html
-
-- Whitesides, Sue H., and Symposium on Graph Drawing. Graph Drawing : 6th International Symposium, GD '98, Montréal, Canada, August 13-15, 1998 : Proceedings. Springer, 1998.
-
-​- Di Battista, Giuseppe. Graph Drawing : 5th International Symposium, GD'97, Rome, Italy, September 18-20, 1997 : Proceedings. Springer Verlag, 1998.
