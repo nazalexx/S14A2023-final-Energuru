@@ -212,12 +212,14 @@ Aleksejs Nazarovs:
 1. Finalize the form design **IN PROCESS**
 2. Add information boxes to the form **IN PROCESS**
 3. Rerun the model notebook, to correct mistakes **IN PROCESS**
-4. ...
+4. Try to optimize the prediction time (currently 20 seconds) or create a progress bar **IN PROCESS**
+5. ...
 
 ​
 Jayden Wang:
 1. Finalize the result templates **IN PROCESS**
 2. ...
+
 
 All:
 1. ...​
