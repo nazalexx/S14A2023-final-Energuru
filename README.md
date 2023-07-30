@@ -91,16 +91,19 @@ S14A2023-final-Energuru/
 
 ### Templates
 
-#### index.html
+#### `index.html`
 ...
 
-#### form.html
+#### `form0.html`
 ...
 
-#### result.html
+#### `form.html`
 ...
 
-#### results.html
+#### `result.html`
+...
+
+#### `results.html`
 ...
 
 
