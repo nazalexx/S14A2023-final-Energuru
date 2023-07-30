@@ -98,7 +98,7 @@ The base template.
 A miniform with just one input - username. Upon submitting, the main form gets initiated.
 
 #### `form.html`
-The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features. Upon submitting, makes a POST request to the `result` function (`/results/&lt;username&gt;`).
+The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features. Upon submitting, makes a POST request to the `result` function (`/results/<username>`).
 
 #### `result.html`
 Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options.
@@ -114,15 +114,15 @@ The same as `result.html` but loops over all the users.
 
 #### `/form`
 - **GET**: Renders the `form0.html` template, which is a mini-form to enter the username, to start the main form.
-- **POST**: Checks if the username exists in the database. Redirects to `/results/&lt;username&gt;` if it does. Redirects to `/form/&lt;username&gt;` if it does not.
+- **POST**: Checks if the username exists in the database. Redirects to `/results/<username>` if it does. Redirects to `/form/<username>` if it does not.
 
-#### `/form/&lt;username&gt;`
+#### `/form/<username>`
 - **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it (main form). If the user chooses to autofill the form, the parameters are passed to the url, e.g. `?autofill=efficient` and the template is rendered with the autofilled inputs.
 
 #### `/results`
 - **GET**: Just displays all the historical results of the app by rendering the `results.html` template.
 
-#### `/results/&lt;username&gt;`
+#### `/results/<username>`
 - **GET**: Just displays the result for this particular username if it exists in the database (`result.html`) or displays an error if it does not.
 - **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned. If not, the inputs are passed to the `utils.predict_and_advise` function. The database gets updated with the new result and it gets passed to the `result.html` template.
 
