@@ -52,7 +52,7 @@ The main page of the app will contain logo, brief description, useful links, som
 ## Project Structure
 
 ```
-S14A2023-final-Energuru
+S14A2023-final-Energuru/
 ├─── data/
 │    └─── energy_cleaned.parquet   # Cleaned data that was used to train the model
 ├─── model/
