@@ -70,7 +70,7 @@
 </style>
 
 <main class="form-signin w-100 m-auto">
-  <form method="GET" action="{{ url_for('form') }}">
+  <form method="GET" action="{{ url_for('form', username=username) }}">
     <p class="important" style="margin-top:10px;">
         To autofill the form, please choose from below:
     </p>
