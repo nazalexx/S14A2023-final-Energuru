@@ -39,7 +39,7 @@ def ml():
 
 
 
-@app.route('/form', methods=['POST'])
+@app.route('/autofill', methods=['POST'])
 def autofill():
     autofill_name = request.form.get('autofill_name')
     if autofill_name is not None:
@@ -47,7 +47,7 @@ def autofill():
             autofill = json.load(file)
     else:
         autofill = None
-    return redirect(url_for('form', post=True, autofill_name=None, autofill=None))
+    return redirect(url_for('form', post=True, autofill_name=autofill_name, autofill=autofill))
 
 @app.route('/form')
 def form(post=False, autofill_name=None, autofill=None):
