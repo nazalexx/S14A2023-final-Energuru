@@ -191,20 +191,20 @@ All:
 Aleksejs Nazarovs:
 1. Train the model **COMPLETE**
 2. Create a logo **COMPLETE**
-3. Task 2 **IN PROCESS**
-4. Task 3 **IN PROCESS**
+3. Implement the backend logic of the form and result generation **COMPLETE**
+4. Create the main form template **COMPLETE**
+5. Document everything in the README **COMPLETE**
 
 ​
 Jayden Wang:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Create the base template, with all the statics **COMPLETE**
+2. Place the logo on the main page **IN PROCESS**
+3. Make a prototype template for the results **IN PROCESS**
 
 
 All:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Create a droplet on DigitalOcean **COMPLETE**
+2. Submit the milestone **COMPLETE**
 
 
 ### Milestone 6 Tasks (08-04-2023)
