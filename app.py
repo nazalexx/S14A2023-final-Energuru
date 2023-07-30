@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for, jsonify
+from flask import Flask, request, render_template, redirect, url_for
 import os
 import json
 import utils
@@ -118,7 +118,7 @@ def result(username):
         with open('model/allowed_choices.json', 'r') as file:
             allowed_choices = json.load(file)
         args = request.form
-        return jsonify(args.items())
+        return args
         inputs = {key: value if key in allowed_choices else int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
         result = {'prediction': prediction, 
