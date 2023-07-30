@@ -119,7 +119,7 @@ def result(username):
             allowed_choices = json.load(file)
         args = request.form.to_dict()
         inputs = {key: value if key in allowed_choices else int(value) for key, value in args.items()}
-        prediction, max_reductions = predict_and_advise(inputs)
+        prediction, max_reductions = utils.predict_and_advise(inputs)
         result = {'prediction': prediction, 
                   'max_reductions': max_reductions
                  }
