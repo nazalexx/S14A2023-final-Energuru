@@ -132,58 +132,38 @@ The same as `result.html` but loops over all the users.
 ### Milestone 1 Tasks
 
 Aleksejs Nazarovs:
-1. Process book **COMPLETE**
+1. Start the process book **COMPLETE**
 
 ​
 All:
-1. Github repository **COMPLETE**
-2. Project plan **COMPLETE**
+1. Create a GitHub repository **COMPLETE**
+2. Discuss the project plan **COMPLETE**
    ​
 
 ### Milestone 2 Tasks
 
-
-Aleksejs Nazarovs:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
-​
-
-Jayden Wang:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
-
-
 All:
-1. Agree on revised data topic **COMPLETE**
-2. Choose data set **COMPLETE**
+1. Agree on a revised data topic **COMPLETE**
+2. Choose the data set **COMPLETE**
 3. Divide the work **COMPLETE**
 
 
 ### Milestone 3 Tasks
 
-
 Aleksejs Nazarovs:
-1. Build a model **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Build a model **COMPLETE**
 
 ​
 Jayden Wang:
-1. Play with data **IN PROCESS**
-2. Build charts **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Get to know the data cleaning process **COMPLETE**
+2. Explore the data **COMPLETE**
 
 
 All:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Decide on what exactly we try to achieve **COMPLETE**
 
 
 ### Milestone 4 Tasks
-
 
 Aleksejs Nazarovs:
 1. Build a model **IN PROCESS**
