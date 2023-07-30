@@ -55,6 +55,12 @@ def form0():
 
 @app.route('/form/<username>')
 def form(username):
+    if os.path.exists('results.json'):
+        with open('results.json', 'r') as file:
+            results = json.load(file)
+        if username in results:
+            return redirect(url_for('result', username = request.form['username']))
+                
     with open('model/allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
     with open('model/columns.json', 'r') as file:
@@ -95,40 +101,31 @@ def results():
 
 @app.route('/results/<username>', methods=['GET', 'POST'])
 def result(username):
-    
-    if request.method == 'GET':
+
+    if os.path.exists('results.json'):
         with open('results.json', 'r') as file:
             results = json.load(file)
+    else:
+        results = {}
+
+    if request.method == 'GET':
         if username in results:
-            prediction = results[username]['prediction']
-            max_reductions = results[username]['max_reductions']
-            return render_template('result.html', prediction=prediction, max_reductions=max_reductions)
+            return render_template('result.html', username=username, result=results[username])
         else:
             return f'No results for {username} in our database :('
 
-    elif request.method == 'POST':
-        if os.path.exists('results.json'):
-            with open('results.json', 'r') as file:
-                results = json.load(file)
-        else:
-            results = []
-        usernames = [result['username'] for result in results]
-        if username in usernames:
-            return f'There is already {username} in our database. Please input another username!'
-        
+    elif request.method == 'POST':  
         with open('model/allowed_choices.json', 'r') as file:
             allowed_choices = json.load(file)
         args = request.form
         inputs = {key: value if key in allowed_choices else int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
-        result = {'firstname': inputs['firstname'], 
-                  'username': inputs['username'], 
-                  'prediction': prediction, 
+        result = {'prediction': prediction, 
                   'max_reductions': max_reductions
                  }
-        results.append(result)
+        results[username] = result
         with open('results.json', 'w') as file:
             json.dump(results, file)
 
-        return render_template('result.html', result=result)
+        return render_template('result.html', username=username, result=result)
 
