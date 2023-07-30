@@ -113,18 +113,18 @@ S14A2023-final-Energuru/
 - **GET**: Displays the index template (main page).
 
 #### `/form`
-- **GET**: Renders the `form0.html` template, which is a mini-form to enter the username, to start the main form
-- **POST**: Checks if the username exists in the database. Returns an error if it does. Redirects to `/form/&lt;username&gt;` if it does not.
+- **GET**: Renders the `form0.html` template, which is a mini-form to enter the username, to start the main form.
+- **POST**: Checks if the username exists in the database. Redirects to `/results/&lt;username&gt;` if it does. Redirects to `/form/&lt;username&gt;` if it does not.
 
 #### `/form/&lt;username&gt;`
-- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it (main form). If the user chooses to autofill the form, the parameters is passed to the url, e.g. `?autofill=efficient` and renders the template with autofilled inputs.
+- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it (main form). If the user chooses to autofill the form, the parameters are passed to the url, e.g. `?autofill=efficient` and the template is rendered with the autofilled inputs.
 
 #### `/results`
-- **GET**: Just displays all the historical results of the website by rendering the `results.html` template.
+- **GET**: Just displays all the historical results of the app by rendering the `results.html` template.
 
 #### `/results/&lt;username&gt;`
-- **GET**: Just displays the result for this particular username if it exists in the database or an error if it does not.
-- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned. If not, the inputs are passed to the `utils.predict_and_advise` function from `utils.py`. The database gets updated with the new result and it gets passed to the `result.html` template.
+- **GET**: Just displays the result for this particular username if it exists in the database (`result.html`) or displays an error if it does not.
+- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned. If not, the inputs are passed to the `utils.predict_and_advise` function. The database gets updated with the new result and it gets passed to the `result.html` template.
 
 
 ## Project Timeline
