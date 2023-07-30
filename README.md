@@ -46,6 +46,7 @@ The main page of the app will contain logo, brief description, useful links, som
 ## Challenges
 - Getting info boxes to work with or without JS
 - Splitting the form into 3 columns for the computer version
+- For some reason, the form posts truncated outputs and request.form's keys and value are truncated right before the first space
 - ...
 
 
