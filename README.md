@@ -129,7 +129,8 @@ The same as `result.html` but loops over all the users.
 
 ## Project Timeline
 
-### Milestone 1 Tasks (07-02-2023)
+### Milestone 1 Tasks
+<br>07-02-2023
 
 Aleksejs Nazarovs:
 1. Start the process book **COMPLETE**
