@@ -19,18 +19,6 @@
   margin-bottom: 5px;
 }
 
-.form-signin .form-floating #floating_firstname {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin .form-floating #floating_username {
-  margin-bottom: 12px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
-
 {% for feature in metadata['enterable_features'] %}
   {% if loop.index == 1 %}
     .form-signin .form-floating #floating_enterable_feature_{{ loop.index }} {
@@ -89,20 +77,6 @@
 
   <form method="POST" action="{{ url_for('result', username=username) }}">
     <h1 style="margin-top:30px;">Form</h1>
-    <p class="important">
-        Please enter your first name and (unique) username:
-    </p>
-
-    <div class="form-floating">
-      <input type="text" name='firstname' class="form-control" id="floating_firstname" placeholder="John" required>
-      <label for="floating_firstname" style="color: rgb(110, 113, 116);">Name</label>
-    </div>
-
-    <div class="form-floating">
-      <input type="text" name='username' class="form-control" id="floating_username" placeholder="john_doe" required>
-      <label for="floating_username" style="color: rgb(110, 113, 116);">Username</label>
-    </div>
-
     <p class="important">
         Please provide the dwelling unit's details:
     </p>
