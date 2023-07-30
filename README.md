@@ -41,7 +41,7 @@ The process documented in `/model/model.ipynb` contains some additional minor da
 
 ### App Description
 
-The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's features. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
+The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's details. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
 
 
 ## Challenges
@@ -70,17 +70,16 @@ S14A2023-final-Energuru/
 │    └─── model.joblib             # Model itself
 ├─── static/
 ├─── templates/
-│    ├─── _footer.html
-│    ├─── _navigation.html
+│    ├─── _navigation.html         # Displays a menu with website's pages
 │    ├─── about.html
-│    ├─── base.html
 │    ├─── blog.html
 │    ├─── data.html
-│    ├─── form.html
+│    ├─── form.html                # Displays the main form to enter dwelling unit's details
+│    ├─── form0.html               # Displays a mini-form to enter username, to start the main form
 │    ├─── home.html
-│    ├─── index.html
-│    ├─── result.html
-│    └─── results.html
+│    ├─── index.html               # Base template to extend from
+│    ├─── result.html              # Displays prediction and consumption reduction options for a particular user
+│    └─── results.html             # Displays prediction and consumption reduction options for all users
 ├─── .gitignore
 ├─── README.md
 ├─── app.py
