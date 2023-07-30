@@ -51,7 +51,7 @@ def form():
     autofill = autofill_inputs = None
     
     autofill = request.args.get('autofill')
-    if autofill:
+    if autofill and autofill != 'none':
         with open('model/' + autofill + '_inputs.json', 'r') as file:
             autofill_inputs = json.load(file)
             autofill_inputs = {key: value if key in allowed_choices else int(value) for key, value in autofill_inputs.items()}
@@ -64,7 +64,7 @@ def form():
                 'options_for_autofill': {'inefficient': 'Random inefficient dwelling unit', 
                                          'average': 'Random average dwelling unit', 
                                          'efficient': 'Random efficient dwelling unit'}, 
-                'autofill': autofill if autofill else None, 
+                'autofill': autofill if autofill != 'none' else None, 
                 'autofill_inputs': autofill_inputs
                }
     return render_template('form.html', metadata=metadata)
