@@ -177,26 +177,27 @@ Aleksejs Nazarovs:
 Jayden Wang:
 1. Decide on what data visualizations to make **COMPLETE**
 2. Understand how to implement these visualizations on the website **COMPLETE**
-3. Task 3 **IN PROCESS**
+3. Decide on how to integrate it with the website's template **COMPLETE**
 
 
 All:
 1. Decide on the design and the layot of the website **COMPLETE**
-2. Outline the basic logic of the app **COMPLETE**
+2. Decide on the main pages of the website **COMPLETE**
+3. Outline the basic logic of the app **COMPLETE**
 
 
 ### Milestone 5 Tasks (07-30-2023)
 
 Aleksejs Nazarovs:
-1. Train the model
-2. Create a log **IN PROCESS**
+1. Train the model **COMPLETE**
+2. Create a logo **COMPLETE**
 3. Task 2 **IN PROCESS**
 4. Task 3 **IN PROCESS**
 
 ​
 Jayden Wang:
-1. Play with data **IN PROCESS**
-2. Build charts **IN PROCESS**
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
 
 
