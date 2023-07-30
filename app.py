@@ -118,7 +118,6 @@ def result(username):
         with open('model/allowed_choices.json', 'r') as file:
             allowed_choices = json.load(file)
         args = request.form.to_dict()
-        return args
         inputs = {key: value if key in allowed_choices else int(value) for key, value in args.items()}
         prediction, max_reductions = predict_and_advise(inputs)
         result = {'prediction': prediction, 
