@@ -92,19 +92,19 @@ S14A2023-final-Energuru/
 ### Templates
 
 #### `index.html`
-The base template
+The base template.
 
 #### `form0.html`
-A miniform with just one input to enter the username. Upon submitting, the main form gets initiated.
+A miniform with just one input - username. Upon submitting, the main form gets initiated.
 
 #### `form.html`
-...
+The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features. Upon submitting, makes a POST request to the `result` function (`/results/&lt;username&gt;`).
 
 #### `result.html`
-...
+Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options.
 
 #### `results.html`
-...
+The same as `result.html` but loops over all the users.
 
 
 ### Endpoints
