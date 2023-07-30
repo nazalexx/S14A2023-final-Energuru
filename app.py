@@ -53,9 +53,10 @@ def form():
         autofill_name = request.form.get('autofill_name')
         if autofill_name is not None:
             with open('model/' + autofill_name + '.json', 'r') as file:
-                autofill = json.load(file)
+                autofill_inputs = json.load(file)
+                autofill_inputs = [key: value if key in allowed_choices else int(value) for key, value in autofill_inputs.items()}
         else:
-            autofill = None
+            autofill_inputs = None
     
     metadata = {'allowed_choices': allowed_choices,
                 'enterable_features': enterable_features,
@@ -64,7 +65,7 @@ def form():
                                          'average_inputs': 'Random average dwelling unit', 
                                          'efficient_inputs': 'Random efficient dwelling unit'}, 
                 'autofill_name': None if request.method == 'GET' else autofill_name, 
-                'autofill': None if request.method == 'GET' else autofill
+                'autofill_inputs': None if request.method == 'GET' else autofill_inputs
                }
     return render_template('form.html', metadata=metadata)
 
