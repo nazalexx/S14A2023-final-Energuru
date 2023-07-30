@@ -39,7 +39,7 @@ def ml():
 
 
 
-@app.route('/form', methods=['GET', 'POST'])
+@app.route('/form')
 def form():
     with open('model/allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
@@ -49,7 +49,7 @@ def form():
         col_descriptions = json.load(file)
     enterable_features = [col for col in columns[1:] if col.split(' / ')[0] not in allowed_choices]
     
-    if request.method == 'POST':
+    if 'autofill' in request.args:
         autofill = request.form.get('autofill')
         if autofill is not None:
             with open('model/' + autofill + '_inputs.json', 'r') as file:
@@ -64,8 +64,8 @@ def form():
                 'options_for_autofill': {'inefficient': 'Random inefficient dwelling unit', 
                                          'average': 'Random average dwelling unit', 
                                          'efficient': 'Random efficient dwelling unit'}, 
-                'autofill': None if request.method == 'GET' else autofill, 
-                'autofill_inputs': None if request.method == 'GET' else autofill_inputs
+                'autofill': None if 'autofill' in request.args else autofill, 
+                'autofill_inputs': None if 'autofill' in request.args else autofill_inputs
                }
     return render_template('form.html', metadata=metadata)
 
