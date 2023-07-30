@@ -74,16 +74,16 @@
 </style>
 
 <main class="form-signin w-100 m-auto">
-  <form method="POST" action="{{ url_for('form') }}">
+  <form method="GET" action="{{ url_for('form') }}">
     <p class="important" style="margin-top:10px;">
         To autofill the form, please choose from below:
     </p>
 
     <div class="form-floating">
-      <select name='autofill_name' class="form-control" id="floating_autofill" required>
-        <option value="" {% if metadata['autofill_name'] is none %}selected{% endif %}>Select...</option>
+      <select name='autofill' class="form-control" id="floating_autofill" required>
+        <option value="" {% if metadata['autofill'] is none %}selected{% endif %}>Select...</option>
         {% for key, value in metadata['options_for_autofill'].items() %}
-        <option value={{ key }} {% if metadata['autofill_name'] is not none and metadata['autofill_name'] == key %}selected{% endif %}>{{ value }}</option>
+        <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill'] == key %}selected{% endif %}>{{ value }}</option>
         {% endfor %}
       </select>
     </div>
