@@ -153,6 +153,7 @@ All:
 Aleksejs Nazarovs:
 1. Further explore and clean the data **COMPLETE**
 2. Reformat the data to satisfy the project needs **COMPLETE**
+3. Divide the features into those that can be realistically changed and those that cannot **COMPLETE**
 
 ​
 Jayden Wang:
@@ -167,11 +168,10 @@ All:
 ### Milestone 4 Tasks (07-23-2023)
 
 Aleksejs Nazarovs:
-1. Divide the features into those that can be realistically changed and those that cannot **COMPLETE**
-2. Create a function to transform user inputs into model input **COMPLETE**
-3. Create a function to predict and advise based on the inputs **COMPLETE**
-4. Generate inefficient, average and efficient dwelling unit inputs **COMPLETE**
-5. Record all the necessary metadata **COMPLETE**
+1. Create a function to transform user inputs into model input **COMPLETE**
+2. Create a function to predict and advise based on the inputs **COMPLETE**
+3. Generate inefficient, average and efficient dwelling unit inputs **COMPLETE**
+4. Record all the necessary metadata **COMPLETE**
 
 ​
 Jayden Wang:
@@ -211,13 +211,11 @@ All:
 Aleksejs Nazarovs:
 1. Finalize the form design **IN PROCESS**
 2. Add information boxes to the form **IN PROCESS**
-3. Task 3 **IN PROCESS**
+3. Rerun the model notebook, to correct mistakes **IN PROCESS**
 
 ​
 Jayden Wang:
 1. Finalize the result templates **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
 
 
 All:
