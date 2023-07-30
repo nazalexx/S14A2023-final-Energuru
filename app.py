@@ -50,7 +50,7 @@ def form():
     enterable_features = [col for col in columns[1:] if col.split(' / ')[0] not in allowed_choices]
     
     if 'autofill' in request.args:
-        autofill = request.form.get('autofill')
+        autofill = request.args['autofill']
         if autofill is not None:
             with open('model/' + autofill + '_inputs.json', 'r') as file:
                 autofill_inputs = json.load(file)
