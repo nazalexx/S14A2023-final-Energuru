@@ -118,7 +118,7 @@
     
     {% for feature, values in metadata['allowed_choices'].items() %}
     <div class="form-floating">
-      <select name={{ feature }} class="form-control" id="floating_choosable_feature_{{ loop.index }}" required>
+      <select name={{ feature }} class="form-select" id="floating_choosable_feature_{{ loop.index }}" required>
         <option value="" {% if metadata['autofill_inputs'] is none %}selected{% endif %}>Select...</option>
         {% for value in values %}
         <option value={{ value }} {% if metadata['autofill_inputs'] is not none and metadata['autofill_inputs'][feature] == value %}selected{% endif %}>{{ value }}</option>
