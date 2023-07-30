@@ -92,10 +92,10 @@ S14A2023-final-Energuru/
 ### Templates
 
 #### `index.html`
-...
+The base template
 
 #### `form0.html`
-...
+A miniform with just one input to enter the username. Upon submitting, the main form gets initiated.
 
 #### `form.html`
 ...
