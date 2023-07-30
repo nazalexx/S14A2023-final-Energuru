@@ -82,13 +82,19 @@
     </p>
 
     {% for feature in metadata['enterable_features'] %}
+    <p class="important">
+        {{ feature }}
+    </p>
     <div class="form-floating">
-      <input type="number" name="floating enterable_feature {{ loop.index }}" class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['autofill_inputs'] is not none %}value={{ metadata['autofill_inputs'][feature] }}{% endif %}>
+      <input type="number" name={{ feature }} class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['autofill_inputs'] is not none %}value={{ metadata['autofill_inputs'][feature] }}{% endif %}>
       <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
     </div>
     {% endfor %}
     
     {% for feature, values in metadata['allowed_choices'].items() %}
+    <p class="important">
+        {{ feature }} : {{ values }}
+    </p>
     <div class="form-floating">
       <select name={{ feature }} class="form-select" id="floating_choosable_feature_{{ loop.index }}" required>
         <option value="" {% if metadata['autofill_inputs'] is none %}selected{% endif %}>Select...</option>
