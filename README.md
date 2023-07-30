@@ -167,9 +167,11 @@ All:
 ### Milestone 4 Tasks (07-23-2023)
 
 Aleksejs Nazarovs:
-1. Build a model **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Divide the features into those that can be realistically changed and those that cannot **COMPLETE**
+2. Create a function to transform user inputs into model input **COMPLETE**
+3. Create a function to predict and advise based on the inputs **COMPLETE**
+4. Generate inefficient, average and efficient dwelling unit inputs **COMPLETE**
+5. Record all the necessary metadata **COMPLETE**
 
 ​
 Jayden Wang:
@@ -185,7 +187,6 @@ All:
 
 
 ### Milestone 5 Tasks (07-30-2023)
-
 
 Aleksejs Nazarovs:
 1. Build a model **IN PROCESS**
