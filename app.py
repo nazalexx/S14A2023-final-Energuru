@@ -4,7 +4,6 @@ import json
 import utils
 
 
-
 app = Flask(__name__)
 
 
@@ -49,12 +48,11 @@ def form0():
                 results = json.load(file)
             if request.form['username'] in results:
                 return redirect(url_for('result', username = request.form['username']))
-        return redirect(url_for('form', username = request.form['username']))
-
-
-
+        return redirect(url_for('personalize', username = request.form['username']))
+    
+    
 @app.route('/form/<username>')
-def form(username):
+def personalize(username):
     if os.path.exists('results.json'):
         with open('results.json', 'r') as file:
             results = json.load(file)

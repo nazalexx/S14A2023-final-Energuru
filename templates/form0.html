@@ -5,29 +5,27 @@
 {% block content %}
 
 <style>
+  .form-signin {
+    max-width: 415px;
+    padding: 1rem;
+  }
 
-.form-signin {
-  max-width: 415px;
-  padding: 1rem;
-}
-
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
 
 
-.form-signin .form-floating #floating_username {
-  margin-bottom: 5px;
-}
-  
+  .form-signin .form-floating #floating_username {
+    margin-bottom: 5px;
+  }
 </style>
 
 <main class="form-signin w-100 m-auto">
 
-  <form method="POST" action="{{ url_for('form0') }}">
+  <form method="POST" action="{{ url_for('personalize') }}">
     <h1>Form</h1>
     <p class="important">
-        To start the form, please enter your username:
+      To start the form, please enter your username:
     </p>
 
     <div class="form-floating">
@@ -36,11 +34,11 @@
     </div>
 
     <button class="btn btn-primary w-100 py-2" type="submit">Submit</button>
-    
+
     <p class="important" style="margin-top:5px;">
-        If the user already exists in our database, you will be redirected to their result page.
+      If the user already exists in our database, you will be redirected to their result page.
     </p>
-    
+
   </form>
 </main>
 
