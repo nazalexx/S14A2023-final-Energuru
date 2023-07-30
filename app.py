@@ -64,8 +64,8 @@ def form():
                 'options_for_autofill': {'inefficient': 'Random inefficient dwelling unit', 
                                          'average': 'Random average dwelling unit', 
                                          'efficient': 'Random efficient dwelling unit'}, 
-                'autofill': None if 'autofill' in request.args else autofill, 
-                'autofill_inputs': None if 'autofill' in request.args else autofill_inputs
+                'autofill': autofill if 'autofill' in request.args else None, 
+                'autofill_inputs': autofill_inputs if 'autofill' in request.args else None
                }
     return render_template('form.html', metadata=metadata)
 
