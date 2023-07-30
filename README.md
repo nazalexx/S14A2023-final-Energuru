@@ -80,12 +80,12 @@ S14A2023-final-Energuru/
 │    ├─── index.html               # Base template to extend from
 │    ├─── result.html              # Displays prediction and consumption reduction options for a particular user
 │    └─── results.html             # Displays prediction and consumption reduction options for all users
-├─── .gitignore
-├─── README.md
-├─── app.py
-├─── requirements.txt
-├─── results.json                  # (server-only)
-└─── utils.py
+├─── .gitignore                    # Files ignored by git
+├─── README.md                     # Project description
+├─── app.py                        # App itself
+├─── requirements.txt              # Required Python packages to run the app
+├─── results.json                  # (ignored by git) Contains all the results from the users of the app
+└─── utils.py                      # Util functions to process user inputs and generate predictions
 ```
 
 ### Templates
