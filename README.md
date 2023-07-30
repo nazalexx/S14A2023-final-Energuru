@@ -175,15 +175,14 @@ Aleksejs Nazarovs:
 
 ​
 Jayden Wang:
-1. Play with data **IN PROCESS**
-2. Build charts **IN PROCESS**
+1. Decide on what data visualizations to make **COMPLETE**
+2. Understand how to implement the **COMPLETE**
 3. Task 3 **IN PROCESS**
 
 
 All:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Decide on the design and the layot of the website **COMPLETE**
+2. Outline the basic logic of the app **COMPLETE**
 
 
 ### Milestone 5 Tasks (07-30-2023)
