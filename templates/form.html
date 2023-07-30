@@ -15,7 +15,7 @@
   z-index: 2;
 }
 
-.form-signin .form-floating #floating_autofill::placeholder {
+.form-signin .form-floating #floating_autofill::label {
   opacity: 0 !important;
 }
 
@@ -81,9 +81,9 @@
 
     <div class="form-floating">
       <select name='autofill_name' class="form-control" id="floating_autofill" required>
-        <option value="" {% if metadata['autofill'] is none %}selected{% endif %}>Select...</option>
+        <option value="" {% if metadata['autofill_name'] is none %}selected{% endif %}>Select...</option>
         {% for key, value in metadata['options_for_autofill'].items() %}
-        <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill_name'] == key %}selected{% endif %}>{{ value }}</option>
+        <option value={{ key }} {% if metadata['autofill_name'] is not none and metadata['autofill_name'] == key %}selected{% endif %}>{{ value }}</option>
         {% endfor %}
       </select>
     </div>
@@ -115,7 +115,7 @@
 
     {% for feature in metadata['enterable_features'] %}
     <div class="form-floating">
-      <input type="number" name={{ feature }} class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['autofill'] is not none %}value={{ metadata['autofill'][feature] }}{% endif %}>
+      <input type="number" name={{ feature }} class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="0" min="0" required {% if metadata['autofill_inputs'] is not none %}value={{ metadata['autofill_inputs'][feature] }}{% endif %}>
       <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
     </div>
     {% endfor %}
@@ -123,9 +123,9 @@
     {% for feature, values in metadata['allowed_choices'].items() %}
     <div class="form-floating">
       <select name={{ feature }} class="form-control" id="floating_choosable_feature_{{ loop.index }}" required>
-        <option value="" {% if metadata['autofill'] is none %}selected{% endif %}>Select...</option>
+        <option value="" {% if metadata['autofill_inputs'] is none %}selected{% endif %}>Select...</option>
         {% for value in values %}
-        <option value={{ value }} {% if metadata['autofill'] is not none and metadata['autofill'][feature] == value %}selected{% endif %}>{{ value }}</option>
+        <option value={{ value }} {% if metadata['autofill_inputs'] is not none and metadata['autofill_inputs'][feature] == value %}selected{% endif %}>{{ value }}</option>
         {% endfor %}
       </select>
       <label for="floating_choosable_feature_{{ loop.index }}">{{ feature }}</label>
