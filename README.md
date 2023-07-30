@@ -43,10 +43,11 @@ The process documented in `/model/model.ipynb` contains some additional minor da
 
 The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's features. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
 
+
 ## Challenges
 - Getting info boxes to work with or without JS
 - Splitting the form into 3 columns for the computer version
-- For some reason, the form posts truncated outputs and request.form's keys and value are truncated right before the first space
+- Reduce the current prediction time of 20 seconds (vectorize the loop) and/or add a progress bar
 - ...
 
 
@@ -90,34 +91,40 @@ S14A2023-final-Energuru/
 
 ### Templates
 
-#### index.html
-...
+#### `index.html`
+The base template.
 
-#### form.html
-...
+#### `form0.html`
+A miniform with just one input - username. Upon submitting, the main form gets initiated.
 
-#### result.html
-...
+#### `form.html`
+The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features. Upon submitting, makes a POST request to the `result` function (`/results/&lt;username&gt;`).
 
-#### results.html
-...
+#### `result.html`
+Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options.
+
+#### `results.html`
+The same as `result.html` but loops over all the users.
 
 
 ### Endpoints
 
-#### /
+#### `/`
 - **GET**: Displays the index template (main page).
 
-#### /form
-- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it.
-- **POST**: This method is in action when the user chooses to autofill the form. In this case, the autofill criteria (to autofill with efficient, average or inefficient inputs) is also passed to the `form.html` template.
+#### `/form`
+- **GET**: Renders the `form0.html` template, which is a mini-form to enter the username, to start the main form.
+- **POST**: Checks if the username exists in the database. Redirects to `/results/&lt;username&gt;` if it does. Redirects to `/form/&lt;username&gt;` if it does not.
 
-#### /results
-- **GET**: Just displays all the historical results of the website by rendering the `results.html` template.
+#### `/form/&lt;username&gt;`
+- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it (main form). If the user chooses to autofill the form, the parameters are passed to the url, e.g. `?autofill=efficient` and the template is rendered with the autofilled inputs.
 
-#### /results/&lt;username&gt;
-- **GET**: Just displays the result for this particular username if it exists in the database or an error if it does not.
-- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned. If not, the inputs are passed to the `predict_and_advise` function from `utils.py`. The database gets updated with the new result and it gets passed to the `result.html` template.
+#### `/results`
+- **GET**: Just displays all the historical results of the app by rendering the `results.html` template.
+
+#### `/results/&lt;username&gt;`
+- **GET**: Just displays the result for this particular username if it exists in the database (`result.html`) or displays an error if it does not.
+- **POST**: This method is in action upon submitting the form. If the user already exists in the database, an error is returned. If not, the inputs are passed to the `utils.predict_and_advise` function. The database gets updated with the new result and it gets passed to the `result.html` template.
 
 
 ## Project Timeline
