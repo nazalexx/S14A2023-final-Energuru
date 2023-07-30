@@ -76,7 +76,7 @@
     </p>
 
     <div class="form-floating">
-      <select name='autofill' class="form-control" id="floating_autofill">
+      <select name='autofill' class="form-select" id="floating_autofill">
         <option value="none" {% if metadata['autofill'] is none %}selected{% endif %}>No autofill</option>
         {% for key, value in metadata['options_for_autofill'].items() %}
         <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill'] == key %}selected{% endif %}>{{ value }}</option>
