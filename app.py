@@ -56,8 +56,7 @@ def form(username):
         with open('results.json', 'r') as file:
             results = json.load(file)
         if username in results:
-            return "qwerty"
-            return redirect(url_for('result', username = request.form['username']))
+            return redirect(url_for('result', username = username))
                 
     with open('model/allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
