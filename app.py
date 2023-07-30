@@ -39,8 +39,22 @@ def ml():
 
 
 
-@app.route('/form')
-def form():
+@app.route('/form', methods=['GET', 'POST'])
+def form0():
+    if request.method == 'GET':
+        return render_template('form0.html')
+    elif request.method == 'POST':
+        if os.path.exists('results.json'):
+            with open('results.json', 'r') as file:
+                results = json.load(file)
+            if username in results:
+                return redirect(url_for('result', username = request.form['username']))
+        return redirect(url_for('form', username = request.form['username']))
+
+
+
+@app.route('/form/<username>')
+def form(username):
     with open('model/allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
     with open('model/columns.json', 'r') as file:
@@ -67,7 +81,7 @@ def form():
                 'autofill': autofill if autofill != 'none' else None, 
                 'autofill_inputs': autofill_inputs
                }
-    return render_template('form.html', metadata=metadata)
+    return render_template('form.html', metadata=metadata, username=username)
 
 
 
