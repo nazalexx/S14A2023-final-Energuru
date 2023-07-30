@@ -176,7 +176,7 @@ Aleksejs Nazarovs:
 ​
 Jayden Wang:
 1. Decide on what data visualizations to make **COMPLETE**
-2. Understand how to implement the **COMPLETE**
+2. Understand how to implement these visualizations on the website **COMPLETE**
 3. Task 3 **IN PROCESS**
 
 
@@ -188,9 +188,10 @@ All:
 ### Milestone 5 Tasks (07-30-2023)
 
 Aleksejs Nazarovs:
-1. Build a model **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. Train the model
+2. Create a log **IN PROCESS**
+3. Task 2 **IN PROCESS**
+4. Task 3 **IN PROCESS**
 
 ​
 Jayden Wang:
@@ -202,7 +203,47 @@ Jayden Wang:
 All:
 1. Task 1 **IN PROCESS**
 2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+### Milestone 6 Tasks (08-04-2023)
+
+Aleksejs Nazarovs:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+​
+Jayden Wang:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+All:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**​
+
+
+### Milestone 7 Tasks (08-06-2023)
+
+Aleksejs Nazarovs:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+​
+Jayden Wang:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
+
+
+All:
+1. Task 1 **IN PROCESS**
+2. Task 2 **IN PROCESS**
+3. Task 3 **IN PROCESS**
 
 
 ## References & Citations
