@@ -111,8 +111,11 @@ S14A2023-final-Energuru/
 - **GET**: Displays the index template (main page).
 
 #### /form
-- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it.
-- **POST**: This method is in action when the user chooses to autofill the form. In this case, the autofill criteria (to autofill with efficient, average or inefficient inputs) is also passed to the `form.html` template.
+- **GET**: Renders the `form0.html` template, which is a mini-form to enter the username, to start the main form
+- **POST**: Checks if the username exists in the database. Returns an error if it does. Redirects to `/form/&lt;username&gt;` if it does not.
+
+#### `/form/&lt;username&gt;`
+- **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it (main form). If the user chooses to autofill the form, the parameters is passed to the url, e.g. ?autofill=efficient and renders the template with autofilled inputs.
 
 #### /results
 - **GET**: Just displays all the historical results of the website by rendering the `results.html` template.
