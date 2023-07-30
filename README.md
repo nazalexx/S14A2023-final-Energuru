@@ -129,7 +129,7 @@ The same as `result.html` but loops over all the users.
 
 ## Project Timeline
 
-### Milestone 1 Tasks
+### Milestone 1 Tasks (07-02-2023)
 
 Aleksejs Nazarovs:
 1. Start the process book **COMPLETE**
@@ -140,7 +140,7 @@ All:
 2. Discuss the project plan **COMPLETE**
    ​
 
-### Milestone 2 Tasks
+### Milestone 2 Tasks (07-09-2023)
 
 All:
 1. Agree on a revised data topic **COMPLETE**
@@ -148,10 +148,11 @@ All:
 3. Divide the work **COMPLETE**
 
 
-### Milestone 3 Tasks
+### Milestone 3 Tasks (07-16-2023)
 
 Aleksejs Nazarovs:
-1. Build a model **COMPLETE**
+1. Further explore and clean the data **COMPLETE**
+2. Reformat the data to satisfy the project needs **COMPLETE**
 
 ​
 Jayden Wang:
@@ -160,10 +161,10 @@ Jayden Wang:
 
 
 All:
-1. Decide on what exactly we try to achieve **COMPLETE**
+1. Decide on what exactly we will try to achieve **COMPLETE**
 
 
-### Milestone 4 Tasks
+### Milestone 4 Tasks (07-23-2023)
 
 Aleksejs Nazarovs:
 1. Build a model **IN PROCESS**
@@ -183,7 +184,7 @@ All:
 3. Task 3 **IN PROCESS**
 
 
-### Milestone 5 Tasks
+### Milestone 5 Tasks (07-30-2023)
 
 
 Aleksejs Nazarovs:
