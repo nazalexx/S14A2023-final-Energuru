@@ -204,19 +204,18 @@ Jayden Wang:
 
 All:
 1. Create a droplet on DigitalOcean **COMPLETE**
-2. Submit the milestone **COMPLETE**
 
 
 ### Milestone 6 Tasks (08-04-2023)
 
 Aleksejs Nazarovs:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
+1. Finalize the form design **IN PROCESS**
+2. Add information boxes to the form **IN PROCESS**
 3. Task 3 **IN PROCESS**
 
 ​
 Jayden Wang:
-1. Task 1 **IN PROCESS**
+1. Finalize the result templates **IN PROCESS**
 2. Task 2 **IN PROCESS**
 3. Task 3 **IN PROCESS**
 
