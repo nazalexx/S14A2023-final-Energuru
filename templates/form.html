@@ -15,7 +15,7 @@
   z-index: 2;
 }
 
-.form-signin .form-floating #floating_autofill {
+.form-signin #floating_autofill {
   margin-bottom: 5px;
 }
 
@@ -75,8 +75,8 @@
         To autofill the form, please choose from below:
     </p>
 
-    <select name='autofill' class="form-select" id="floating_autofill">
-      <option value="none" {% if metadata['autofill'] is none %}selected{% endif %}>No autofill</option>
+    <select name='autofill' class="form-select" id="floating_autofill" required>
+      <option value="" {% if metadata['autofill'] is none %}selected{% endif %}>Select...</option>
       {% for key, value in metadata['options_for_autofill'].items() %}
       <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill'] == key %}selected{% endif %}>{{ value }}</option>
       {% endfor %}
