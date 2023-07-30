@@ -1,3 +1,4 @@
+import numpy as np
 from pandas import DataFrame
 import json
 import joblib
