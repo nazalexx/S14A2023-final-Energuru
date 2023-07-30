@@ -1,6 +1,6 @@
 Flask
 Jinja2
 gunicorn
-json
+pandas
 joblib
 scikit-learn
