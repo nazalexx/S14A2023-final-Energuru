@@ -101,7 +101,7 @@ A miniform with just one input - username. Upon submitting, the main form gets i
 The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features. Upon submitting, makes a POST request to the `result` function (`/results/<username>`).
 
 #### `result.html`
-Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options.
+Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options (bar chart).
 
 #### `results.html`
 The same as `result.html` but loops over all the users.
@@ -212,39 +212,31 @@ Aleksejs Nazarovs:
 1. Finalize the form design **IN PROCESS**
 2. Add information boxes to the form **IN PROCESS**
 3. Rerun the model notebook, to correct mistakes **IN PROCESS**
+4. ...
 
 ​
 Jayden Wang:
 1. Finalize the result templates **IN PROCESS**
-
+2. ...
 
 All:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**​
+1. ...​
 
 
 ### Milestone 7 Tasks (08-06-2023)
 
 Aleksejs Nazarovs:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. ...
 
-​
+
 Jayden Wang:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. ...
 
 
 All:
-1. Task 1 **IN PROCESS**
-2. Task 2 **IN PROCESS**
-3. Task 3 **IN PROCESS**
+1. ...
 
 
 ## References & Citations
 
-- The Stanford GraphBase: A Platform for Combinatorial Computing by Donald E. Knuth (New York: ACM Press, 1994), viii+576pp.
-https://www-cs-faculty.stanford.edu/~knuth/sgb.html
+- Nazarovs, A., Neumann, A., Sotiriou Droz, M., and Zhits, S., 2022. US Residential Energy Consumption. Final Project for CSCI E-109A: Introduction to Data Science. Harvard Extension School. Unpublished.
