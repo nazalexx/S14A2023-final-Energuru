@@ -39,8 +39,18 @@ def ml():
 
 
 
-@app.route('/form', methods=['GET', 'POST'])
-def form():
+@app.route('/form', methods=['POST'])
+def autofill():
+    autofill_name = request.form.get('autofill_name')
+    if autofill_name is not None:
+        with open('model/' + autofill_name + '.json', 'r') as file:
+            autofill = json.load(file)
+    else:
+        autofill = None
+    return redirect(url_for('form', post=True, autofill_name=None, autofill=None))
+
+@app.route('/form')
+def form(post=False, autofill_name=None, autofill=None):
     with open('model/allowed_choices.json', 'r') as file:
         allowed_choices = json.load(file)
     with open('model/columns.json', 'r') as file:
@@ -49,13 +59,7 @@ def form():
         col_descriptions = json.load(file)
     enterable_features = [col for col in columns[1:] if col.split(' / ')[0] not in allowed_choices]
     
-    if request.method == 'POST':
-        autofill_name = request.form.get('autofill_name')
-        if autofill_name is not None:
-            with open('model/' + autofill_name + '.json', 'r') as file:
-                autofill = json.load(file)
-        else:
-            autofill = None
+
     
     metadata = {'allowed_choices': allowed_choices,
                 'enterable_features': enterable_features,
@@ -63,8 +67,8 @@ def form():
                 'options_for_autofill': {'inefficient_inputs': 'Random inefficient dwelling unit', 
                                          'average_inputs': 'Random average dwelling unit', 
                                          'efficient_inputs': 'Random efficient dwelling unit'}, 
-                'autofill_name': None if request.method == 'GET' else autofill_name, 
-                'autofill': None if request.method == 'GET' else autofill
+                'autofill_name': None if post else autofill_name, 
+                'autofill': None if post else autofill
                }
     return render_template('form.html', metadata=metadata)
 
