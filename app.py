@@ -118,4 +118,3 @@ def result(username):
 
         return render_template('result.html', result=result)
 
-
