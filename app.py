@@ -54,7 +54,7 @@ def form():
         if autofill_name is not None:
             with open('model/' + autofill_name + '.json', 'r') as file:
                 autofill_inputs = json.load(file)
-                autofill_inputs = [key: value if key in allowed_choices else int(value) for key, value in autofill_inputs.items()}
+                autofill_inputs = {key: value if key in allowed_choices else int(value) for key, value in autofill_inputs.items()}
         else:
             autofill_inputs = None
     
