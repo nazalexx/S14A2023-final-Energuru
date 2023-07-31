@@ -52,9 +52,6 @@ def form0():
     
 @app.route('/form/<username>')
 def form(username):
-    print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA:', username)
-    if username == '':
-        return redirect(url_for('form0'))
     if os.path.exists('results.json'):
         with open('results.json', 'r') as file:
             results = json.load(file)
@@ -128,5 +125,3 @@ def result(username):
             json.dump(results, file)
 
         return render_template('result.html', username=username, result=result)
-
-
