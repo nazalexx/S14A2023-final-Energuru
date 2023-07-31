@@ -52,6 +52,7 @@ def form0():
     
 @app.route('/form/<username>')
 def form(username):
+    print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA:', username)
     if username == '':
         return redirect(url_for('form0'))
     if os.path.exists('results.json'):
