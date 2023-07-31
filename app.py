@@ -78,9 +78,9 @@ def form(username):
     metadata = {'allowed_choices': allowed_choices,
                 'enterable_features': enterable_features,
                 'col_descriptions': col_descriptions, 
-                'options_for_autofill': {'inefficient': 'Random inefficient dwelling unit', 
-                                         'average': 'Random average dwelling unit', 
-                                         'efficient': 'Random efficient dwelling unit'}, 
+                'options_for_autofill': {'inefficient': 'Sample inefficient dwelling unit', 
+                                         'average': 'Sample average dwelling unit', 
+                                         'efficient': 'Sample efficient dwelling unit'}, 
                 'autofill': autofill if autofill != 'none' else None, 
                 'autofill_inputs': autofill_inputs
                }
