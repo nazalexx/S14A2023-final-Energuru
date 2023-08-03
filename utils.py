@@ -1,5 +1,5 @@
 import numpy as np
-from pandas import DataFrame
+from pandas import DataFrame, concat
 import json
 import joblib
 with open('model/columns.json', 'r') as file:
@@ -37,7 +37,7 @@ def predict_and_advise(inputs):
             new_inputs[col] = value
             new_model_input = user_inputs_to_model_input(new_inputs)
             new_model_input.index = [col + ' / ' + value]
-            model_inputs_df = pd.concat([model_inputs_df, new_model_input])
+            model_inputs_df = concat([model_inputs_df, new_model_input])
     
     predictions = np.exp(model.predict(model_inputs_df))
     prediction = int(predictions[0])
