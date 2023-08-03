@@ -4,3 +4,4 @@ gunicorn
 pandas
 joblib
 scikit-learn
+plotly
