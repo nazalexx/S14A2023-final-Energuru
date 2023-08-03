@@ -27,25 +27,30 @@ def user_inputs_to_model_input(inputs):
     return model_input
 
 def predict_and_advise(inputs):
-    model_input = user_inputs_to_model_input(inputs)
-    prediction = int(np.exp(model.predict(model_input))[0])
-    
+    model_inputs_df = user_inputs_to_model_input(inputs)
+
     ignore_values = ['None', 'Other', 'Other Fuel', 'Uninsulated', 'Finished, Uninsulated', 'Unfinished, Uninsulated']
-    max_reductions = {}
     for col in changeable_features:
-        col_reductions = {}
-        for value in [value for value in allowed_choices[col] if value not in ignore_values and 'ninsulated' not in value]:
-            new_inputs = inputs
+        for value in [value for value in allowed_choices[col] 
+                      if value != inputs[col] and value not in ignore_values and 'ninsulated' not in value]:
+            new_inputs = inputs.copy()
             new_inputs[col] = value
             new_model_input = user_inputs_to_model_input(new_inputs)
-            new_prediction = int(np.exp(model.predict(new_model_input))[0])
-            if new_prediction < prediction:
-                col_reductions[value] = prediction-new_prediction
-        if len(col_reductions)>0:
-            max_key = max(col_reductions, key=col_reductions.get)
-            max_reduction_amount = col_reductions[max_key]
-            max_reductions[col] = [max_key, max_reduction_amount]
+            new_model_input.index = [col + ' / ' + value]
+            model_inputs_df = pd.concat([model_inputs_df, new_model_input])
+    
+    predictions = np.exp(model.predict(model_inputs_df))
+    prediction = int(predictions[0])
+    reductions = predictions[0] - predictions[1:]
+    reductions = {name: int(red) for name, red in zip(list(model_inputs_df.index[1:]), list(reductions))}
+    
+    reductions = {col: {name.split(' / ')[1]: red for name, red in reductions.items() if col==name.split(' / ')[0]} 
+                  for col in changeable_features}
+    max_reductions = {key: [max(values, key=values.get), values[max(values, key=values.get)]] for key, values in reductions.items()}
+
+    max_reductions = {k: v for k, v in max_reductions.items() if v[1]>0}
     if len(max_reductions)>0:
         sorted_items = sorted(max_reductions.items(), key = lambda item: item[1][1], reverse=True)
         max_reductions = dict(sorted_items)
+
     return prediction, max_reductions
