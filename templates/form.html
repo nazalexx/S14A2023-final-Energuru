@@ -197,6 +197,7 @@ body {
         To autofill the form, please choose from below:
     </p>
 
+<div class="select-wrapper"> 
     <select name='autofill' class="form-select" id="floating_autofill" required>
       <option value="" {% if metadata['autofill'] is none %}selected{% endif %}>Select...</option>
       {% for key, value in metadata['options_for_autofill'].items() %}
@@ -206,6 +207,7 @@ body {
 	<div class="help-tip">
 	<p>Explanation of autofill</p>
 	</div>
+</div> 
     <button class="btn btn-success w-100 py-2" type="submit">Autofill</button>
 
   </form>
