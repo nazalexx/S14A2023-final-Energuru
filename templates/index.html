@@ -9,9 +9,13 @@
     <meta name="author" content="Aleksejs and Jayden">
     <meta name="generator" content="Flask v2+">
     <title>Energuru</title>
-
-    <!-- <link rel="canonical" href="https://energuru.ai/"> -->
-    <link rel="canonical" href="http://164.92.97.192/">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='favicons/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicons/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicons/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{url_for('static', filename='favicons/site.webmanifest')}}">
+    
+    <link rel="canonical" href="http://energuru.ai/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="{{ url_for('static', filename='dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
