@@ -203,7 +203,9 @@ body {
       <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill'] == key %}selected{% endif %}>{{ value }}</option>
       {% endfor %}
     </select>
-	  
+	<div class="help-tip">
+	<p>Explanation of autofill</p>
+	</div>
     <button class="btn btn-success w-100 py-2" type="submit">Autofill</button>
 
   </form>
