@@ -197,7 +197,7 @@ body {
         To autofill the form, please choose from below:
     </p>
 
-<div class="form-group"> 
+<div class="form-autofill"> 
     <select name='autofill' class="form-select" id="floating_autofill" required>
       <option value="" {% if metadata['autofill'] is none %}selected{% endif %}>Select...</option>
       {% for key, value in metadata['options_for_autofill'].items() %}
