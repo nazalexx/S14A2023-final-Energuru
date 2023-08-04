@@ -220,9 +220,7 @@ body {
       <input type="number" name="{{ feature }}" class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="" min="0" required {% if metadata['autofill_inputs'] is not none %}value={{ metadata['autofill_inputs'][feature] }}{% endif %}>
       <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
 	<div class="help-tip">
-	<p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.<br />
-	    <a href="#">Here is a link</a>
-	</p>
+	<p>metadata['col_descriptions'][feature]</p>
 	</div>
     </div>
     {% endfor %}
@@ -236,6 +234,9 @@ body {
         {% endfor %}
       </select>
       <label for="floating_choosable_feature_{{ loop.index }}">{{ feature }}</label>
+	<div class="help-tip">
+	<p>metadata['col_descriptions'][feature]</p>
+	</div>
     </div>
     {% endfor %}
 
