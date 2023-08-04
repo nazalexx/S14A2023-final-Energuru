@@ -187,7 +187,11 @@ body {
     100% { opacity:100%; }
 }
 
-
+.help-tip.autofill-tip {
+  top: 5%;
+  right: 10px;
+  width: 200px;
+}
 
 
 
@@ -208,7 +212,7 @@ body {
       <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill'] == key %}selected{% endif %}>{{ value }}</option>
       {% endfor %}
     </select>
-	<div class="help-tip">
+	<div class="help-tip autofill-tip">
 	<p>Explanation of autofill</p>
 	</div>
 </div> 
