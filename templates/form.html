@@ -202,21 +202,7 @@ body {
       <option value={{ key }} {% if metadata['autofill'] is not none and metadata['autofill'] == key %}selected{% endif %}>{{ value }}</option>
       {% endfor %}
     </select>
-
-
-    <p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.<br />
-	    <a href="#">Here is a link</a>
-    </p>
-<div class="help-tip">
-    <p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.<br />
-	    <a href="#">Here is a link</a>
-    </p>
-</div>
-
-    <p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.<br />
-	    <a href="#">Here is a link</a>
-    </p>
-    
+	  
     <button class="btn btn-success w-100 py-2" type="submit">Autofill</button>
 
   </form>
@@ -232,6 +218,11 @@ body {
     <div class="form-floating">
       <input type="number" name="{{ feature }}" class="form-control" id="floating_enterable_feature_{{ loop.index }}" placeholder="" min="0" required {% if metadata['autofill_inputs'] is not none %}value={{ metadata['autofill_inputs'][feature] }}{% endif %}>
       <label for="floating_enterable_feature_{{ loop.index }}" style="color: rgb(110, 113, 116);">{{ feature }}</label>
+	<div class="help-tip">
+	<p>This is the inline help tip! It can contain all kinds of HTML. Style it as you please.<br />
+	    <a href="#">Here is a link</a>
+	</p>
+	</div>
     </div>
     {% endfor %}
     
