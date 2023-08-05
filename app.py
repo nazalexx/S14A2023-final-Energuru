@@ -126,12 +126,17 @@ def result(username):
     
 @app.route('/chart')
 def notdash():
+   
+   labelsList = [] # Keys from the model/available_choices.json file.
+   savingsList = [] # This should be a list of values for each pair of level-label pair
+   levelsList = [] # 'inefficient', 'average', 'efficient' repeated for each label
+
    df = pd.DataFrame({
-      'Fruit': ['Apples', 'Oranges', 'Bananas', 'Apples', 'Oranges', 'Bananas'],
-      'Amount': [4, 1, 2, 2, 4, 5],
-      'City': ['SF', 'SF', 'SF', 'Montreal', 'Montreal', 'Montreal']
+      'Attributes': labelsList,
+      'Savings': savingsList,
+      'Levels': levelsList
    })
-   fig = px.bar(df, x='Fruit', y='Amount', color='City',    barmode='group')
+   fig = px.bar(df, x='Attributes', y='Savings', color='Levels', barmode='group')
    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
    return render_template('notdash.html', graphJSON=graphJSON)
 
