@@ -122,21 +122,8 @@ def result(username):
         with open('results.json', 'w') as file:
             json.dump(results, file)
 
-        return render_template('result.html', username=username, result=result)
+        graphJSON = plot_results(username, prediction, max_reductions)
+        
+        return render_template('result.html', graphJSON=graphJSON)
     
-@app.route('/chart')
-def notdash():
-   
-   labelsList = [] # Keys from the model/available_choices.json file.
-   savingsList = [] # This should be a list of values for each pair of level-label pair
-   levelsList = [] # 'inefficient', 'average', 'efficient' repeated for each label
-
-   df = pd.DataFrame({
-      'Attributes': labelsList,
-      'Savings': savingsList,
-      'Levels': levelsList
-   })
-   fig = px.bar(df, x='Attributes', y='Savings', color='Levels', barmode='group')
-   graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-   return render_template('notdash.html', graphJSON=graphJSON)
 
