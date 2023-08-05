@@ -100,6 +100,7 @@ S14A2023-final-Energuru/
 │    ├─── data.html                # Displays the data description
 │    ├─── form.html                # Displays the main form to enter dwelling unit's details
 │    ├─── form0.html               # Displays a mini-form to enter username, to start the main form
+│    ├─── home.html                # Displays the main page
 │    ├─── index.html               # Base template to extend from
 │    ├─── result.html              # Displays prediction and consumption reduction options for a particular user
 │    └─── results.html             # Displays prediction and consumption reduction options for all users
@@ -113,14 +114,29 @@ S14A2023-final-Energuru/
 
 ### Templates
 
-#### `index.html`
-The base template and the main page.
+#### `_navigation.html`
+
+
+#### `about.html`
+
+
+#### `blog.html`
+
+
+#### `data.html`
+
+
+#### `form.html`
+The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features and their descriptions, which get presented in info boxes. Upon submitting, makes a POST request to the `result` function (`/results/<username>`).
 
 #### `form0.html`
 A miniform with just one input - username. Upon submitting, the main form gets initiated.
 
-#### `form.html`
-The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features. Upon submitting, makes a POST request to the `result` function (`/results/<username>`).
+#### `home.html`
+
+
+#### `index.html`
+The base template and the main page.
 
 #### `result.html`
 Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options (bar chart).
