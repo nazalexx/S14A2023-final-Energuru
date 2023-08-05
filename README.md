@@ -22,7 +22,7 @@ CSCI S-14A - Building Interactive Web Applications for Data Analysis
 
 ## Project Basics
 
-The purpose of this project is to create a predictive model and an interactive web-based tool for predicting dwelling unit's energy consumption based on its features and location. This tool will aim to assist homeowners, prospective buyers and real estate professionals in estimating the potential energy consumption of a dwelling unit, coupled with tailored recommendations for reducing energy use. The tool will provide transparency and valuable data-driven insights that can inform negotiations, guide investment decisions and foster a more sustainable and energy-conscious property market. It will be implemented in Python, using Flask and scikit-learn.
+The purpose of this project is to create a predictive model and an interactive web-based tool for predicting dwelling unit's energy consumption based on its features and location. This tool will aim to assist homeowners, prospective buyers and real estate professionals in estimating the potential energy consumption of a dwelling unit, coupled with tailored recommendations for reducing energy use. The tool will provide transparency and valuable data-driven insights that can inform negotiations, guide investment decisions and foster a more sustainable and energy-conscious property market.
 
 
 ## Project Description
@@ -41,7 +41,19 @@ The process documented in `model/model.ipynb` contains some additional minor dat
 
 ### App Description
 
-The main page of the app will contain logo, brief description, useful links, some energy saving motivation, etc. The user will be offered to fill out a form with their dwelling unit's details. Upon filling it, its energy consumption prediction will be made and a bar chart will appear, showing by improving which features and how the best consumption reduction can be achieved. A page with historical results of our users will be deployed too.
+Welcome to Energuru, a revolutionary tool aimed at making energy consumption and efficiency transparent, data-driven, and user-friendly. It predicts a dwelling unit's energy usage and suggests tailored energy reduction strategies.
+
+Energuru is built with Python using Flask web framework. It leverages a comprehensive dataset containing energy profiles of half a million residential buildings across the U.S. After extensive data cleaning, a predictive model was trained, using histogram-based gradient boosting algorithm with the learning rate and the base estimator’s depth being carefully tuned to maximize predictive ability on put-aside test data.
+
+The website is simple and intuitive. You are offered to fill out your information and you receive the result in seconds.
+
+So, let’s get started!
+
+The form is designed to specify each and every detail from location to lightbulbs used and in case you do it, the results will be most accurate. However, if you are interested in a quick analysis of particular features of your apartment and you are interested in approximate results, you can autofill the form with pre-defined inputs of either ‘efficient’, ‘inefficient’ or ‘average’ dwelling unit in terms of energy consumption. You can then specify the particular features you are interested in while being provided with detailed information on every parameter.
+
+Once the form is submitted, Energuru estimates the annual energy consumption in kilowatt-hours while presenting a plot showing where the most energy can be saved, providing particular values and the most efficient substitutes in your particular case. In future, financial savings estimates will be also available.
+
+Energuru has immense potential in fostering a more sustainable and energy-conscious property market. Whether you're a homeowner, a prospective buyer, or a real estate professional, Energuru can assist in making informed, eco-friendly decisions.
 
 
 ## Project Structure
@@ -64,12 +76,11 @@ S14A2023-final-Energuru/
 ├─── static/
 ├─── templates/
 │    ├─── _navigation.html         # Displays a menu with website's pages
-│    ├─── about.html
-│    ├─── blog.html
-│    ├─── data.html
+│    ├─── about.html               # Displays info about the app and the team
+│    ├─── blog.html                # Displays the blog
+│    ├─── data.html                # Displays the data description
 │    ├─── form.html                # Displays the main form to enter dwelling unit's details
 │    ├─── form0.html               # Displays a mini-form to enter username, to start the main form
-│    ├─── home.html
 │    ├─── index.html               # Base template to extend from
 │    ├─── result.html              # Displays prediction and consumption reduction options for a particular user
 │    └─── results.html             # Displays prediction and consumption reduction options for all users
@@ -84,7 +95,7 @@ S14A2023-final-Energuru/
 ### Templates
 
 #### `index.html`
-The base template.
+The base template and the main page.
 
 #### `form0.html`
 A miniform with just one input - username. Upon submitting, the main form gets initiated.
