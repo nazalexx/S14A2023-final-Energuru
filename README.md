@@ -74,6 +74,25 @@ S14A2023-final-Energuru/
 │    ├─── model.ipynb              # Notebook with model creation, changeable feature selection, input generation, etc.
 │    └─── model.joblib             # Model itself
 ├─── static/
+│    ├─── dist/
+│    │    ├─── css/
+│    │    │    ├─── bootstrap.min.css
+│    │    │    └─── bootstrap.min.css.map
+│    │    └─── js/
+│    │         ├─── bootstrap.bundle.min.js
+│    │         └─── bootstrap.bundle.min.js.map
+│    ├─── favicons/
+│    │    ├─── android-chrome-192x192.png
+│    │    ├─── android-chrome-512x512.png
+│    │    ├─── apple-touch-icon.png
+│    │    ├─── favicon-16x16.png
+│    │    ├─── favicon-32x32.png
+│    │    ├─── favicon.ico
+│    │    └─── site.webmanifest
+│    ├─── js/
+│    │    └─── color-modes.js
+│    ├─── energuru.css
+│    └─── logo.png
 ├─── templates/
 │    ├─── _navigation.html         # Displays a menu with website's pages
 │    ├─── about.html               # Displays info about the app and the team
