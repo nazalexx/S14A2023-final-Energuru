@@ -16,8 +16,8 @@ CSCI S-14A - Building Interactive Web Applications for Data Analysis
 
 ### Team Members
 
-- Aleksejs Nazarovs - aln755@g.harvard.edu
-- Jayden Wang - jaw0880@g.harvard.edu
+- Aleksejs Nazarovs - aln755@g.harvard.edu / a.nazarovs@outlook.com
+- Jayden Wang - jaw0880@g.harvard.edu / jaydenwang0105@gmail.com
 
 
 ## Project Basics
