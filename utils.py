@@ -54,3 +54,19 @@ def predict_and_advise(inputs):
         max_reductions = dict(sorted_items)
 
     return prediction, max_reductions
+
+
+
+# Plotting
+def plot_results(username, prediction, max_reductions, X=15):
+    topX_max_reductions = dict(list(max_reductions.items())[:X])
+    df = pd.DataFrame.from_dict(topX_max_reductions, orient='index', columns=['Target', 'Value'])
+    fig = px.bar(df, y='Value', text='Value', labels={'index':'Label', 'Value':'Height'}, hover_data=['Target'])
+    fig.update_traces(texttemplate='%{text:.2s}', textposition='outside',
+                      hovertemplate='CHANGE TO: %{customdata[0]}',
+                      marker=dict(color='rgb(25,135,84)'))
+    fig.update_layout(title_text=f"Energuru's annual consumption's estimate for {username}: {prediction.replace('_', ' ')} kWh.",
+                      xaxis_title=None, yaxis_title='Annual Savings (kWh)',
+                      yaxis=dict(range=[0, 1.15*df['Value'].max()]), plot_bgcolor='rgb(255,255,255)')
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    return graphJSON
