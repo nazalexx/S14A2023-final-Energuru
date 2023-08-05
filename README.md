@@ -107,7 +107,7 @@ S14A2023-final-Energuru/
 ├─── README.md                     # Project description
 ├─── app.py                        # App itself
 ├─── requirements.txt              # Required Python packages to run the app
-├─── results.json                  # <i>(ignored by git)</i> Contains all the results from the users of the app
+├─── results.json                  # (ignored by git) Contains all the results from the users of the app
 └─── utils.py                      # Util functions to process user inputs and generate predictions
 ```
 
