@@ -93,7 +93,7 @@ def results():
         results = json.load(file)
     graphsJSON = []
     for username, result in results.items():
-        graphsJSON.append( plot_results(username, result['prediction'], result['max_reductions']) )
+        graphsJSON.append( utils.plot_results(username, result['prediction'], result['max_reductions']) )
     return render_template('results.html', graphsJSON=graphsJSON)
 
 
@@ -126,7 +126,7 @@ def result(username):
         with open('results.json', 'w') as file:
             json.dump(results, file)
 
-        graphJSON = plot_results(username, prediction, max_reductions)
+        graphJSON = utils.plot_results(username, prediction, max_reductions)
         
         return render_template('result.html', graphJSON=graphJSON)
     
