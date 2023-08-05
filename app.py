@@ -23,21 +23,15 @@ def about():
 
 
 
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
-
-
-
 @app.route('/data')
 def data():
     return render_template('data.html')
 
 
 
-@app.route('/mk')
-def ml():
-    return render_template('mkit/index.html')
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
 
 
 
