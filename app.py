@@ -140,3 +140,4 @@ def notdash():
    fig = px.bar(df, x='Fruit', y='Amount', color='City',    barmode='group')
    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
    return render_template('notdash.html', graphJSON=graphJSON)
+
