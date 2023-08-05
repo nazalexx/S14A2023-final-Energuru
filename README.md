@@ -115,16 +115,16 @@ S14A2023-final-Energuru/
 ### Templates
 
 #### `_navigation.html`
-
+The navigation panel at the top of every page.
 
 #### `about.html`
-
+The 'About Us' page, with the app description and information about the team.
 
 #### `blog.html`
-
+A blog with various relevant information.
 
 #### `data.html`
-
+Detailed data source, cleaning and modeling description.
 
 #### `form.html`
 The main form. It also contains another mini-form with a selection of autofill if user wants one. The main form itself loops over all the dwelling unit's features and their descriptions, which get presented in info boxes. Upon submitting, makes a POST request to the `result` function (`/results/<username>`).
@@ -133,10 +133,10 @@ The main form. It also contains another mini-form with a selection of autofill i
 A miniform with just one input - username. Upon submitting, the main form gets initiated.
 
 #### `home.html`
-
+The main page.
 
 #### `index.html`
-The base template and the main page.
+The base template to extend from
 
 #### `result.html`
 Displays a single result of one user. A prediction of annual consumption and a chart with consumption reduction options (bar chart).
