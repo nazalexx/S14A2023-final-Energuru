@@ -73,7 +73,7 @@ S14A2023-final-Energuru/
 │    ├─── inefficient_inputs.json  # Generated inputs for an inefficient dwelling unit in terms of energy consumption
 │    ├─── model.ipynb              # Notebook with model creation, changeable feature selection, input generation, etc.
 │    └─── model.joblib             # Model itself
-├─── static/
+├─── static/                       # All static files: CSS, website logo, favicons
 │    ├─── dist/
 │    │    ├─── css/
 │    │    │    ├─── bootstrap.min.css
