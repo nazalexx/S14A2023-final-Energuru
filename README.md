@@ -12,7 +12,7 @@ CSCI S-14A - Building Interactive Web Applications for Data Analysis
 
 **Website Design Template**: https://getbootstrap.com/docs/5.3/examples/carousel/
 
-**Website Location**: http://164.92.97.192/
+**Website Location**: http://energuru.ai/ (http://164.92.97.192/)
 
 ### Team Members
 
