@@ -46,8 +46,9 @@ def form0():
             if request.form['username'] in results:
                 return redirect(url_for('result', username = request.form['username']))
         return redirect(url_for('form', username = request.form['username']))
-    
-    
+
+
+
 @app.route('/form/<username>')
 def form(username):
     if os.path.exists('results.json'):
@@ -90,7 +91,10 @@ def form(username):
 def results():
     with open('results.json', 'r') as file:
         results = json.load(file)
-        return render_template('results.html', results=results)
+    graphsJSON = []
+    for username, result in results.items():
+        graphsJSON.append( plot_results(username, result['prediction'], result['max_reductions']) )
+    return render_template('results.html', graphsJSON=graphsJSON)
 
 
 
