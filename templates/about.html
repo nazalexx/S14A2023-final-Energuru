@@ -1,40 +1,16 @@
 {% extends "index.html" %}
 
 {% block content %}
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        color: #333;
-    }
-    h1 {
-        color: #067df7;
-    }
-    p {
-        margin-bottom: 20px;
-    }
-    .highlight-bold {
-        font-weight: bold;
-    }
-    .highlight-italic {
-        font-style: italic;
-    }
-    .highlight-underline {
-        text-decoration: underline;
-    }
-</style>
-
     <main class="container mt-4">
         <div class="bg-body-tertiary p-5 rounded mt-2">
             <h1>Welcome to Energuru</h1>
-            <p><span class="highlight-bold">Energuru</span>, a <span class="highlight-italic">revolutionary tool</span> aimed at making energy consumption and efficiency transparent, data-driven, and user-friendly. It predicts a dwelling unit's energy usage and suggests tailored energy reduction strategies.</p>
-            <p><span class="highlight-bold">Energuru</span> is built with <span class="highlight-italic">Python</span> using <span class="highlight-italic">Flask web framework</span>. It leverages a comprehensive dataset containing energy profiles of half a million residential buildings across the U.S. After extensive data cleaning, a predictive model was trained, using histogram-based gradient boosting algorithm with the learning rate and the base estimator’s depth being carefully tuned to maximize predictive ability on put-aside test data.</p>
-            <p>The website is <span class="highlight-bold">simple and intuitive</span>. You are offered to fill out your information and you receive the result in seconds.</p>
-            <p>The form is designed to specify each and every detail from location to lightbulbs used and in case you do it, the results will be most accurate. However, if you are interested in a quick analysis of particular features of your apartment and you are interested in approximate results, you can autofill the form with pre-defined inputs of either ‘<span class="highlight-underline">efficient</span>’, ‘<span class="highlight-underline">inefficient</span>’ or ‘<span class="highlight-underline">average</span>’ dwelling unit in terms of energy consumption. You can then specify the particular features you are interested in while being provided with detailed information on every parameter.</p>
-            <p>Once the form is submitted, <span class="highlight-bold">Energuru</span> estimates the annual energy consumption in kilowatt-hours while presenting a plot showing where the most energy can be saved, providing particular values and the most efficient substitutes in your particular case. In future, financial savings estimates will be also available.</p>
-            <p><span class="highlight-bold">Energuru</span> has immense potential in fostering a more <span class="highlight-italic">sustainable</span> and <span class="highlight-italic">energy-conscious property market</span>. Whether you're a homeowner, a prospective buyer, or a real estate professional, Energuru can assist in making informed, eco-friendly decisions.</p>
+            <p class="lead">Welcome to Energuru, a revolutionary tool aimed at making energy consumption and efficiency transparent, data-driven, and user-friendly. It predicts a dwelling unit's energy usage and suggests tailored energy reduction strategies.</p>
+            <p class="lead">Energuru is built with Python using Flask web framework. It leverages a comprehensive dataset containing energy profiles of half a million residential buildings across the U.S. After extensive data cleaning, a predictive model was trained, using histogram-based gradient boosting algorithm with the learning rate and the base estimator’s depth being carefully tuned to maximize predictive ability on put-aside test data.</p>
+            <p class="lead">The website is simple and intuitive. You are offered to fill out your information and you receive the result in seconds.</p>
+            <p class="lead">So, let’s <a href="{{ url_for('form0') }}">get started</a>!</p>
+            <p class="lead">The form is designed to specify each and every detail from location to lightbulbs used and in case you do it, the results will be most accurate. However, if you are interested in a quick analysis of particular features of your apartment and you are interested in approximate results, you can autofill the form with pre-defined inputs of either ‘efficient’, ‘inefficient’ or ‘average’ dwelling unit in terms of energy consumption. You can then specify the particular features you are interested in while being provided with detailed information on every parameter.</p>
+            <p class="lead">Once the form is submitted, Energuru estimates the annual energy consumption in kilowatt-hours while presenting a plot showing where the most energy can be saved, providing particular values and the most efficient substitutes in your particular case. In future, financial savings estimates will be also available.</p>
+            <p class="lead">Energuru has immense potential in fostering a more sustainable and energy-conscious property market. Whether you're a homeowner, a prospective buyer, or a real estate professional, Energuru can assist in making informed, eco-friendly decisions.</p>
         </div>
 
         <div class="bg-body-tertiary p-5 rounded mt-2">
