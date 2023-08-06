@@ -73,9 +73,7 @@ def plot_results(username, prediction, max_reductions, X=15):
     yaxis_title='Annual Savings (kWh)',
     yaxis=dict(range=[0, 1.15*df['Value'].max()]), 
     plot_bgcolor='white',
-    margin=dict(
-        t=50,
-    )
+    margin=dict(t=60)
     )
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
