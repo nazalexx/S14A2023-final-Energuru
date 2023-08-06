@@ -109,7 +109,6 @@ def result(username):
         if username in results:
             result=results[username]
             graphJSON = utils.plot_results(username, result['prediction'], result['max_reductions'])
-            return graphJSON
             return render_template('result.html', graphJSON=graphJSON)
         else:
             return f'No results for {username} in our database :('
