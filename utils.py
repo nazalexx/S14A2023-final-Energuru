@@ -2,6 +2,8 @@ import numpy as np
 from pandas import DataFrame, concat
 import json
 import joblib
+import plotly
+import plotly.express as px
 with open('model/columns.json', 'r') as file:
     columns = json.load(file)
 with open('model/changeable_features.json', 'r') as file:
