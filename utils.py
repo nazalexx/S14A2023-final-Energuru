@@ -67,8 +67,21 @@ def plot_results(username, prediction, max_reductions, X=15):
     fig.update_traces(texttemplate='%{text:.2s}', textposition='outside',
                       hovertemplate='CHANGE TO: %{customdata[0]}',
                       marker=dict(color='rgb(25,135,84)'))
-    fig.update_layout(title_text=f"<br>Energuru's annual consumption's estimate <br>for {username}: {prediction} kWh.",
-                      xaxis_title=None, yaxis_title='Annual Savings (kWh)',
-                      yaxis=dict(range=[0, 1.15*df['Value'].max()]), plot_bgcolor='rgb(255,255,255)')
+    fig.update_layout(
+    title_text=f"<br>Energuru's annual consumption's estimate<br>for {username}: {prediction} kWh.",
+    xaxis_title=None, 
+    yaxis_title='Annual Savings (kWh)',
+    yaxis=dict(range=[0, 1.15*df['Value'].max()]), 
+    plot_bgcolor='rgb(255,255,255)',
+    autosize=False,
+    margin=dict(
+        autoexpand=False,
+        l=100,
+        r=20,
+        t=110,
+    ),
+    showlegend=False,
+    plot_bgcolor='white'
+    )
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
