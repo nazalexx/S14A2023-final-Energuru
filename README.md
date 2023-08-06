@@ -186,14 +186,14 @@ Aleksejs Nazarovs:
 1. Start the process book **COMPLETE**
 
 ​
-All:
+Both:
 1. Create a GitHub repository **COMPLETE**
 2. Discuss the project plan **COMPLETE**
    ​
 
 ### Milestone 2 Tasks (07-09-2023)
 
-All:
+Both:
 1. Agree on a revised data topic **COMPLETE**
 2. Choose the data set **COMPLETE**
 3. Divide the work **COMPLETE**
@@ -212,7 +212,7 @@ Jayden Wang:
 2. Explore the data **COMPLETE**
 
 
-All:
+Both:
 1. Decide on what exactly we will try to achieve **COMPLETE**
 
 
@@ -231,7 +231,7 @@ Jayden Wang:
 3. Decide on how to integrate it with the website's template **COMPLETE**
 
 
-All:
+Both:
 1. Decide on the design and the layot of the website **COMPLETE**
 2. Decide on the main pages of the website **COMPLETE**
 3. Outline the basic logic of the app **COMPLETE**
@@ -249,45 +249,35 @@ Aleksejs Nazarovs:
 ​
 Jayden Wang:
 1. Create the base template, with all the statics **COMPLETE**
-2. Place the logo on the main page **IN PROCESS**
-3. Make a prototype template for the results **IN PROCESS**
+2. Place the logo on the main page **COMPLETE**
+3. Make a prototype template for the results **COMPLETE**
 
 
-All:
+Both:
 1. Create a droplet on DigitalOcean **COMPLETE**
 
 
 ### Milestone 6 Tasks (08-04-2023)
 
 Aleksejs Nazarovs:
-1. Finalize the form design **IN PROCESS**
-2. Add information boxes to the form **IN PROCESS**
-3. Rerun the model notebook, to correct mistakes **IN PROCESS**
-4. Try to optimize the prediction time (currently 20 seconds) or create a progress bar **IN PROCESS**
-5. ...
+1. Finalize the form design **COMPLETE**
+2. Add information boxes to the form **COMPLETE**
+3. Rerun the model notebook, to correct mistakes **COMPLETE**
+4. Optimize the prediction time (currently 20 seconds) **COMPLETE**
+5. Make info boxes smaller and properly visible in the phone version **COMPLETE**
 
 ​
 Jayden Wang:
-1. Finalize the result templates **IN PROCESS**
-2. ...
-
-
-All:
-1. ...​
+1. Create the main, about, data and blog pages **COMPLETE**
+2. Create the plot **COMPLETE**
+3. Finalize the result templates **COMPLETE**
+4. Record a screencast **COMPLETE**
 
 
 ### Milestone 7 Tasks (08-06-2023)
 
-Aleksejs Nazarovs:
-1. ...
-
-
-Jayden Wang:
-1. ...
-
-
-All:
-1. ...
+Both:
+1. Polish all the website's information and appearence
 
 
 ## References & Citations
