@@ -107,7 +107,9 @@ def result(username):
 
     if request.method == 'GET':
         if username in results:
-            return render_template('result.html', username=username, result=results[username])
+            result=results[username]
+            graphJSON = utils.plot_results(username, result['prediction'], result['max_reductions'])
+            return render_template('result.html', graphJSON=graphJSON)
         else:
             return f'No results for {username} in our database :('
 
@@ -125,6 +127,6 @@ def result(username):
             json.dump(results, file)
 
         graphJSON = utils.plot_results(username, prediction, max_reductions)
-        return graphJSON
+
         return render_template('result.html', graphJSON=graphJSON)
     
