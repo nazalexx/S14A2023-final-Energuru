@@ -2,9 +2,7 @@ from flask import Flask, request, render_template, redirect, url_for
 import os
 import json
 import utils
-import pandas as pd
-import plotly
-import plotly.express as px
+
 
 
 app = Flask(__name__)
