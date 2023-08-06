@@ -277,7 +277,7 @@ Jayden Wang:
 ### Milestone 7 Tasks (08-06-2023)
 
 Both:
-1. Polish all the website's information and appearence
+1. Polish all the website's information and appearence **COMPLETE**
 
 
 ## References & Citations
