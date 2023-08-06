@@ -144,7 +144,9 @@ Displays a single result of one user. A prediction of annual consumption and a c
 #### `results.html`
 The same as `result.html` but loops over all the users.
 
-![Sample Plot](https://github.com/Harvard-DCE-BIWADA/S14A2023-final-Energuru/assets/104507318/fa284440-3c64-4ff8-96ee-5018eb33c922)
+#### Sample Plot
+
+![Sample Plot](https://github.com/Harvard-DCE-BIWADA/S14A2023-final-Energuru/assets/104507318/39c56f2b-dad4-492a-a88e-0bce75d81e5c)
 
 
 ### Endpoints
