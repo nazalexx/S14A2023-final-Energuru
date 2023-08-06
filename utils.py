@@ -76,9 +76,6 @@ def plot_results(username, prediction, max_reductions, X=15):
     autosize=False,
     margin=dict(
         autoexpand=False,
-        l=100,
-        r=20,
-        t=110,
     ),
     showlegend=False,
     )
