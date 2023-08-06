@@ -4,8 +4,15 @@
 
 {% block content %}
 
-<p>{{ username }}</p>
-<p>{{ result['prediction'] }}</p>
-<p>{{ result['max_reductions'] }}</p>
+<main class="form-signin w-100 m-auto">
+
+  <div id="plotly-div"></div> 
+
+  <script>
+    var graphData = JSON.parse('{{ graphJSON | safe }}');  // parse JSON 
+    Plotly.newPlot('plotly-div', graphData.data, graphData.layout);  // display plot
+  </script>
+  
+</main>
 
 {% endblock %}
