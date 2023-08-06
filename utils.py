@@ -68,7 +68,7 @@ def plot_results(username, prediction, max_reductions, X=15):
                       hovertemplate='CHANGE TO: %{customdata[0]}',
                       marker=dict(color='rgb(25,135,84)'))
     fig.update_layout(
-    title_text=f"Energuru's annual consumption's estimate for <br>{username}: {prediction} kWh.",
+    title_text=f"<br>Energuru's annual consumption's estimate for <br>{username}: {prediction} kWh.",
     xaxis_title=None, 
     yaxis_title='Annual Savings (kWh)',
     yaxis=dict(range=[0, 1.15*df['Value'].max()]), 
