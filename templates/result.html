@@ -10,7 +10,7 @@
 
   <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
   <script>
-    var graphData = [{{ graphJSON | safe }}];
+    var graphData = {{ graphJSON | safe }};
     Plotly.newPlot('plotly-div', graphData.data, graphData.layout);
   </script>
   
