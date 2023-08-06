@@ -125,8 +125,6 @@ def result(username):
             json.dump(results, file)
 
         graphJSON = utils.plot_results(username, prediction, max_reductions)
-        print('/n')
-        print(graphJSON)
-        print('/n')
+        return graphJSON
         return render_template('result.html', graphJSON=graphJSON)
     
