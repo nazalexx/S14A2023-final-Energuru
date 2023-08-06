@@ -74,7 +74,7 @@ def plot_results(username, prediction, max_reductions, X=15):
     yaxis=dict(range=[0, 1.15*df['Value'].max()]), 
     plot_bgcolor='white',
     margin=dict(
-        t=110,
+        t=50,
     )
     )
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
