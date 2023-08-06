@@ -152,7 +152,16 @@ Here is an example of the Results Page!
 ### Endpoints
 
 #### `/`
-- **GET**: Displays the index template (main page).
+- **GET**: Displays the home template (main page).
+
+#### `/about`
+- **GET**: Displays the about template.
+
+#### `/data`
+- **GET**: Displays the data template.
+
+#### `/blog`
+- **GET**: Displays the blog template.
 
 #### `/form`
 - **GET**: Renders the `form0.html` template, which is a mini-form to enter the username, to start the main form.
@@ -162,7 +171,7 @@ Here is an example of the Results Page!
 - **GET**: Takes all the necessary information from the json files and renders the `form.html` template with it (main form). If the user chooses to autofill the form, the parameters are passed to the url, e.g. `?autofill=efficient` and the template is rendered with the autofilled inputs.
 
 #### `/results`
-- **GET**: Just displays all the historical results of the app by rendering the `results.html` template.
+- **GET**: Just displays all historical results of the app by rendering the `results.html` template.
 
 #### `/results/<username>`
 - **GET**: Just displays the result for this particular username if it exists in the database (`result.html`) or displays an error if it does not.
