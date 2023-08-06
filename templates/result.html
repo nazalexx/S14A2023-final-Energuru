@@ -8,6 +8,7 @@
 
   <div id="plotly-div"></div> 
 
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script>
     var graphData = JSON.parse('{{ graphJSON | safe }}');  // parse JSON 
     Plotly.newPlot('plotly-div', graphData.data, graphData.layout);  // display plot
