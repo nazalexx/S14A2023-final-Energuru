@@ -286,6 +286,10 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 # Additional information
 https://cipherlist.eu/
 
+# To enable Flask with NXING front of it
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+
 ## References & Citations
 
 - Nazarovs, A., Neumann, A., Sotiriou Droz, M., and Zhits, S., 2022. US Residential Energy Consumption. Final Project for CSCI E-109A: Introduction to Data Science. Harvard Extension School. Unpublished.
