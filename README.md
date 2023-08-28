@@ -279,6 +279,12 @@ Jayden Wang:
 Both:
 1. Polish all the website's information and appearence **COMPLETE**
 
+# SSL/Security
+
+# Documentation:
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-20-04-1
+# Additional information
+https://cipherlist.eu/
 
 ## References & Citations
 
