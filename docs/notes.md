@@ -9,8 +9,20 @@ cd /var/www/EnerguruAI
 # New droplet will not allow installation of global python libraries, and 
 # therefore forcing us to install libraries through venv
 apt install python3.11-venv
+source venv/bin/activate
+pip install -r requirements.txt
 
 ```
+
+After this, EVERY TIME YOU LOGIN via the Terminal, do this
+
+```
+cd /var/www/EnerguruAI
+source venv/bin/activate
+```
+
+before you start ANY development on the machine!!!
+
 
 # Notes
 
