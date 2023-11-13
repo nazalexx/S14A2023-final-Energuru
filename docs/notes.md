@@ -11,11 +11,16 @@ cd /var/www/EnerguruAI
 apt install python3.11-venv
 
 ```
-Logged into the droplet as root
-Cloned
+
+# Notes
+
+Certificates are in `/root/ssl/` directory, and additional files are in `/etc/nginx/dhparam.pem` and in the `/etc/nginx/snippets` directory
 
 
 # Other notes
+
+To enable as a UNIX background service, create a serviced entry in `/etc/systemd/system/energuru.service` and use the file from the `docs` directory.
+
 ```
 # To enable Flask with NXING front of it
  https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04

@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance to serve Energuru.ai
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+
+WorkingDirectory=/var/www/EnerguruAI
+Environment="PATH=/var/www/EnerguruAI"
+ExecStart=gunicorn --workers 3 --bind unix:energuru.sock -m 007 app:app
+
+[Install]
+WantedBy=multi-user.target
+
